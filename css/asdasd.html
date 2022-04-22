@@ -1,0 +1,2434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="css/main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>		
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/flickity@2.3.0/dist/flickity.css">
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="css/animate.css">
+<!-- <link rel="stylesheet" href="css/docs.theme.min.css"> -->
+<link rel="stylesheet" href="css//owl.carousel.min.css">
+
+<!--
+<nav class="container-fluid web-menu bg-primary menu-pc">
+  <div class="container main-manu pt-3 pb-3 navbar-fixed-top menu-pc">
+      <div class="main-menu-item1"><img width="75px" height="20px"  src="image/logo.png" alt="">
+        <div style="height: 15px;">
+          <span style="color: #FFF;"><i> <a href="#" class="p-link text-white"> Explore</a></i></span><span style="color: yellow;"><i><a href="#" class="p-link text-white"> Plus</a></i></span><sup><img width="15px" height="15px" src="image/plus_aef861.png" alt=""></sup>
+        </div>
+      </div>
+      <div class="main-menu-item2">  <div class="input-group ">
+            <input type="text" class="form-control" placeholder="Search for Products, Brands and more" aria-label="Search for Products, Brands and more" aria-describedby="basic-addon2">
+             <span class="input-group-text" id="basic-addon2"> <svg width="15px" height="15px">
+              <a href="" class="text-white"><path d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 "></path></a>
+          </svg></span>
+          </div></div>
+      <div class="menu-btn main-menu-item3">
+        <div class="menu-btn-item"><a class="nav-link active mt-1" aria-current="page" href="#" style="color: #0d6efd;background-color: white;padding: 3px 28px 3px 28px;">Login </a></div>
+        <div class="menu-btn-item"><a class="nav-link active" aria-current="page" href="#" style="color: white;">Become a Seller </a></div>
+        <div class="menu-btn-item" style="padding-top: 20p;margin-top: -10px;">-->
+           <!-- <a class="nav-link active" aria-current="page" href="#" style="color: white;">More 
+          <nav id="menu">
+            <ul>
+              <li><a href="#" class="nav-link active" aria-current="page" href="#" style="color: white;">More </a>
+                <ul>
+                    <li><a href="#"><img width="20px" style="padding-right: 5px;" src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-notification-user-interface-kmg-design-flat-kmg-design.png"/>Notification Preferences</a>
+                    <li><a href="#"><img width="20px" style="padding-right: 5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAGM0lEQVRoge3ZX2wU1xXH8e+dnV3b2C5gQ8B/gPxRgShNotRA1aovpK3aRmqUPwpFcVNFVRCqAKnqQ1UptHKkqg99qBQ1JkFR0xejJCQPtCGokSKjtlEqRXYeqkQJ1AQRnI0jsPFis2vvzpxfH3ZZe+2FmV0DfQjnaXbO7sznzL1z794ZuBk348sd7loc5LHDSoy0TWyTue1CPWZsdqJDokUSiGlJaZNOOBgWNvjR+2veo8/Z/7WArW+NrwsSbg9yP5HUJUEJTOW2Sp+B8rZGhQZMyf6RR9tHb2gB9/1zarXLF34n3JOI1BwwNr70GSTlDb2UKOg3Jx/vPH/dC+gZzDxusj8h2iqBdeHncsY4zu09tXPtK9elgJ4hJclkDgg9tRCwZPy83zrj4MpL6X3Du7cUrlkBPW+kl6ll2euYfng98XM5d6yQ5bH07s5slM2LxA8peWPxgPSA32B/vevwh6klF0Amc+DG4kEmJL578VLrs1G8q3ahrx/P9GI2UAveggAKecJCAYUhkhWvk5eARAqXSCC8KHw5Z6ad6V3rX625gG1vX2wPXPixxKo4eAsKeLks3+lIsb27hbtXNXHLsiRNvsd4LmB0Ks/gmQyH/zvFuDVCMhWJL+UmMH9Tenf1Ida/UgEBwe8lFwsvgbJTvPXgrXS1LO62a5qTrGlO0rO2mV33Bux7+wzvnBckU1F4JNqc8s8Ae6o5q94D9xwf7y5NUrH7vDNVxS+MFY0+B79/G53+DArDKDxIGO6pzoOn1scuIBG6vfXMsAtjJjACW5xYlvT42ddWoiCIxJdyqTDwf17NurgL9cnDJntF7aMNwImJGf7ywTmOn73EuVxIq+/xq62r6b1rVcVptna0YPkLuMZU9HEFQk9wWPvZ4cKrtsB93574hlB3zUMl8MehMX509AyvfwYT/nK81namG5bz23e/4OJsxXlpSSVKVz8Gvrjd1T52umehd1EBMre9nnHevBTPn8yjxuW4RBLhinkcIR7hgj6WnsojXFx8Med0f2QXkrRlbtyPh0fgGpoQ3rxcKZ/Ps22Vz8rGylO9OzpVLDQuXgK5GC0gNtY1w1bDFwpsSOZ49nsbKs5xYSZg4INJSPix8aXdmyJbgOJKqjZ8RW7uyt+eyvHyg3dwS3OyfPhCKPYcO12czDwvPr64ryNGFyovA+vHBwFdiSyvPfRV2prmTpELjF1vnOIfX2jeJBYbD6I1RgFLwyOw2Sx/+EF3BX5yJuCnR0YYnvQh2VgPnstD9fxYPJEVF+B142Uh6xrEt7rnLlYo8cSREYYnk+A31I2XmIosQNLndeMlZGLDVyob9l9nLjJ8zsCvq9vM5YzPo1vAdLJufOl7s4XKph6bzoOXWBpeYE4nFnIX3wOOIUwP14uXHB9O5Bn4z7nLR+RsJo+FAd4S8KV9Q9EFYIOSVx/ehHBMJ5r59b8z5ZwEXrJpSXgJQrPByC700ftr3pM4Wxf+cs75yCWKK7IgKOZdYkl4SZ9mZzcORxZAnzNhh+rGCyyf45sr8gw80MHfHulm391NKJeBed+rEY/kDlV7FFl1RWZK9jsVfimRqhWvMKArmefQI3fS4Bevz9auVqZmAv78cVD++1ALHjFrofVXs1Zd0Iw82j5q6KWa8Sr+Pb6zraGMvxz3rG1GYaEePCb3Ym7/ps9iFwDQqOBpifO14UF4DI/luJALKo43+EkGvGTNeInxRN6euZLzqo9V7nhlbKeZvRwbX7q6ls9za8MMT97bzoomn7+fnOTo6VlcQ3OteMxsR27/5tfqKgDg9oH0C4Z2x8WXc2GIBQGSgfPLE1kteEn92ac37b2aL/LJ3Cepjj0SR2rCC+QS4KfAb6wX/2a2kP5FlC/60eIOFxayrlfSsdj4OofK8m9NR7OF1h30bQ8idDEKANK7O7OrZ8YeAnvhuuOl/myQfpi+6CfTUMcLjs4XP/0x8JzEqmuMP2dme652w1aLWC0wP9K71r/qZr3NzuyAxOw1wM+a3HOJfGFzrXhY4ku+9ufPdvlmew16ka2rCY/OytyAhdZ/pUnquhdQjj557W2nt+B0P+Z6BJtk6qK0vpY0jdyooZMYQ6HZYHZ24/C1eM16M27Glz3+Bx6qU+210aWFAAAAAElFTkSuQmCC"/>24 x 7 Customer Care</a>
+                    <li><a href="#"><img width="20px" style="padding-right: 5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABlklEQVRoge2WvUoDQRRGz6yCNiJ2xp93UIIIolhaum8g6EvYCIqPYWdrE39AUAQFU6QQRHwDNdqFYKOguRYSCCQ7uzM7ye6GOd3Ozizn2ztzGfB4PB5PCpTNovBVFgh4AIKIKfeVGbVmr5WcKAEtlTn1iHCombJq6WOMVQCAyqzaRzhwKWODdQAAFOcifDlyscI6wOaHLAM3SjHu0MeYUZtFYV3KtLgEJttjInwrxVhaobAuVWAl4nVXczCuQFiXMnANTHUMNxlh3dGZiJKHHs3BqAJR8hKwcTqtakAtfBNQ7Jl8Nw2JK5BAHvjvTq1fFh06akkUIKl8m7N59eTIL5bYAKbyg0Z7Bvohv3TX1HUZY7QVELjA/Z93Jg8xAQK46njMzbbpRBugUWJHwTHwnkd5iDkDt0r9AFsDcrEi3WUuB1jdhXSUjl6qIE4Pqo4+VGBw8jAEW8gHyJrCBzDvQrvPTu8yabGpQG7kYQi2kA+QNYUP0NWFJrZPtF3ms6865vSqQK66TByF30I+QNYUPoDH4/Fkyx+dfXA1mNJpxgAAAABJRU5ErkJggg=="/>Advertise</a>
+                    <li><a href="#"><img width="20px" style="padding-right: 5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABmklEQVRYhe2WPS9DYRTHf6dsmHwWBtFEOzJogpUIi7it0NibSIxdNP0CTDVKTHWvNCxlMfgCEhYRrwMV95hcpbf3rVrLPdu9z3n+v/8993k5QshIl/QUGHMbUzixDEmG0UuENdAODiAwHlYsioE/jdhAbCA2EBuIDYjXYKqklsBEhwzLNCTdbtCzAgkY7BAOPhqeBrSPDHDVAfwm8cFsZAPmilwrTAL3EeBPajNZXRPPD/BdhJYhl0AGeAsBbyRsZqycXPglBtoFpiE1hXnADpCuwHI1J9Ug2oG3oWVIRWDTly7kTUN2g+o629Ct13Pr8dI7WkRYdxVTykdZWf2R76PbXIGWXs+txzMN8gh7LvxK8o6sy3tP3fAnoYgO37KkQvM/rtkDLBQKEmSN/IhIR/F+QRraYA44A+r2O9PHi/IaRas/yiSA43V5AEajzv+Kf7+MfCuQLql200BzBV66CfoVjy0GFM57aMBhOQZEKPaKrnyzHAPmqhwobHcbLsqWZcih8/w7IVXWKbHZAEaAoT/iPgN1hWIzHOATBSx0L7ecUQ8AAAAASUVORK5CYII="/>Download App </a>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </a> 
+        </div>
+        <div class="menu-btn-item pt-2">
+          <a href="" class="p-link ">
+            <svg class="cart-svg " width="16 " height="16" viewBox="0 0 16 16">
+                  <path d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.8 05L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86 " fill="#fff "></path>
+                </svg> 
+            <svg class="V3C5bO" width="14" height="14" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="_1bS9ic" d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#fff"></path></svg>
+            <span style="color: #FFF;"> Cart</span>
+            </a>
+          </div>    
+        </div>  
+      </div>
+    </div>
+  </div>
+</nav>   -->
+
+<style>
+  .dropdown-login{
+    display: none;
+    z-index: 15;
+    position: absolute;
+    top: 43px;
+    left: 1060px;
+  }
+
+  .main-menu-item3:hover .dropdown-login{
+    display: block;
+  }
+  
+  .dropdown-list{
+    text-decoration: none;
+    color: black;
+    padding: 10px 20p;
+  }
+
+  .dropdown-list:hover{
+    text-decoration: none;
+    color: black;
+    background-color: wheat;
+  }
+
+  .dropdown-item{
+    /* border-bottom: 1px solid rgb(78, 78, 78); */
+    padding: 10px;
+  }
+.dropdown-list-item{
+  padding-left: 10px;
+}
+  .dropdown-list-item:hover{
+    margin-left: 3%;
+    color: black;
+    background-color: wheat;
+  }
+  .dropdown-item:hover{
+    background-color: wheat;
+  }
+
+  .dropdown-item:active{
+    background-color: wheat;
+    color: black;
+  }
+
+  .dropdown:hover>.dropdown-menu {
+  display: block;
+  width: max-content;
+  margin-left:-35px;
+}
+
+.dropdown>.dropdown-toggle:active {
+
+    pointer-events: none;
+}
+
+.tag_name{
+  padding-left: 10px;
+}
+
+.dropdown-item:hover{
+  background-color: rgb(240, 240, 240);
+}
+
+.dropdown-item{
+  border: 1px gainsboro;
+}
+</style>
+<nav>
+  <div class="container-fluid web-menu bg-primary menu-pc">
+    <div class="main-menu-container pt-2 pb-2" id="main-container-main">
+      <div class="main-menu-item1">  
+        <div><img width="75px" height="20px"  src="image/logo.png" alt=""></div>
+        <div style="width: 75px; margin-top: -8px;"><span style="color: #FFF;"><i> <a href="#" style="font-size:x-small;" class="p-link text-white"> Explore</a></i></span><span style="color: yellow;"><i><a href="#" style="font-size: x-small;" class="p-link text-white"> Plus</a></i></span><sup><img width="7px" height="7px" src="image/plus_aef861.png" alt=""></sup></div></div>
+       <div class="main-menu-item2">
+        <div class="input-group">
+          <input type="text" class="form-control" style=" border: 1px solid #ffffff;" placeholder="Search for products, brands and more" aria-label="Search for products, brands and more" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <span class="input-group-text" style="border: none" id="basic-addon2">
+                  <svg width="18" height="18" viewBox="0 0 17 18" class="src-btn" xmlns="http://www.w3.org/2000/svg"><g fill="#2874F1" fill-rule="evenodd"><path class="_34RNph" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="_34RNph" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg> 
+            </span>
+          </div>
+        </div>
+        <!-- <input style=" border: 0px; padding:5px 5px 5px 10px;"  type="text" class="search-bar" placeholder="Search for Products, Brands and more" aria-label="Search for Products, Brands and more" aria-describedby="basic-addon2"> -->
+
+        <!-- <svg width="20" height="20" viewBox="0 0 17 18" class="src-btn" xmlns="http://www.w3.org/2000/svg"><g fill="#2874F1" fill-rule="evenodd"><path class="_34RNph" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="_34RNph" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg> -->
+      </div>
+      <div class="main-menu-item3 main-menu-btn-bar" >
+        <div class="dropdown">
+          <a class="login-btn menu-tag-name " class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Login</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/54.png" alt=""> <span class="tag_name"> Login </span></a>
+            <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/50.png" alt=""> <span class="tag_name"> New user </span></a>
+            <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/43.png" alt=""> <span class="tag_name"> FLipkart Plus Zone </span></a>
+            <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/51.png" alt=""> <span class="tag_name"> Order </span></a>
+            <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/53.png" alt=""> <span class="tag_name"> Wishlist </span></a>
+            <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/41.png" alt=""> <span class="tag_name"> Rewards </span></a>
+            <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/49.png" alt=""> <span class="tag_name"> Gift cards </span></a> 
+          </div>
+        </div>
+        <div class="menu-tag-name"><a  href="https://seller.flipkart.com/" class="main-menu-tag"><span>Become a Seller</span></a></div>
+        <div class="menu-tag-name"><a  href="https://seller.flipkart.com/" class="main-menu-tag"><span>More</span></a></div>
+        <div class="menu-tag-name"><a  href="https://seller.flipkart.com/" class="main-menu-tag"><svg class="V3C5bO" width="14" height="14" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="_1bS9ic" d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#fff"></path></svg><span style="padding-left:10px;">Cart</span></a></div>
+      </div>
+    </div>
+  </div>
+</nav>
+<style>
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown>.dropdown-toggle:active {
+
+    pointer-events: none;
+}
+.main-menu-item1{flex-basis: 9%;}
+.main-menu-item2{flex-basis: 51%;}
+.main-menu-item3{flex-basis: 40%;}
+.maanu-tag-name{
+  font-weight: 500;
+  font-size: medium;
+}
+  .src-btn{
+    /* margin-left: 15px; */
+    cursor: pointer;
+    margin-top: 5px;
+  }
+.search-bar:focus-visible{
+  border: 0px; 
+}
+
+.search-bar:focus{
+  border: 0px; 
+}
+  .btn-main-menu{
+    background-color: #FFF;  
+    width: 100%;
+    color: #FFF;
+    border: #FFF;
+  }
+
+  .main-menu-item2{
+    background-color: #FFF;
+    padding-left: 2px;
+    cursor: pointer;
+  }
+
+  .main-menu-tag{
+    text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly; 
+      /* line-height: 20px; */
+      /* font-size: 16px;
+      letter-spacing: .1px; */
+      /* font-weight: 500; */
+      color: #fff;
+      position: relative;
+  }
+
+  .main-menu-tag:hover{
+    color: #FFF;
+  }
+
+  .main-menu-item3{
+      color: white;
+      text-decoration: none;
+  }
+  .main-menu-btn-bar {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-evenly; 
+  }
+
+  .login-btn{
+    text-decoration: none;
+    color: #2874f0;
+    font-weight: 500;
+    background-color: #fff;
+    cursor: pointer;
+    height: 32px;
+    padding: 5px 40px;
+    border: 1px solid #dbdbdb;
+}
+  
+  .search-bar{
+    padding:  16px;
+    padding-top: 3px;
+    padding-bottom:3px;
+    border-radius: 2px 0 0 2px;
+    border: 0;
+    outline: 0 none;
+    font-size: 14px;
+    height: 36px;
+    width: 100%;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    /* width: 100%; */
+  }
+
+  .main-menu-container{
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    align-items: center;
+  }
+  .sidebar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 9%;
+    padding-bottom: 9%;
+  }
+
+  .item-1{
+    justify-items: center;
+  }
+
+  .item-2{
+    justify-items: center;
+  }
+
+  .item-3{
+    justify-items: end;
+  }
+  .sub-side-menu{
+    padding-top: 2%;
+    background-color: #FFF;
+    line-height: 200%;
+  }
+  .sidebar-line{
+    margin: 1%;
+  }
+  .links{
+    background-color: #FFF;
+  }
+  </style>
+
+<nav class="container-fluid web-menu bg-primary menu-moblie" >
+<div class="menu-moblie pt-4 pb-2"> 
+  <div class="row ">
+    <div class="col-1">  
+      <label for="click" class="menu-btn">
+        <a class="btn btn-primary mobile-menu--btn" href="javascript:void(0)">
+          <div id="side-bar-toggel-btn" class="main-menu-item1"><img width="30px" height="30px" style="color: #FFF;"  src="image/ds.svg" alt=""></div>
+        </a>
+      </label> 
+    </div>
+    <div class="col-7">  
+        <div class="main-menu-item1"><img width="120px" height="40px"  src="image/moblie-logo.png" alt="">
+    <!-- <div>
+            <span style="color: #FFF;"><i style="font-size: xx-small;">Explore</i></span><span style="color: yellow;"><i style="font-size: xx-small;"> Plus</i></span><sup><img width="7px" height="7px" src="image/plus_aef861.png" alt=""></sup>
+          </div> -->
+        </div>
+    </div>
+    <div class="col-2" style="text-align: end; text-decoration: none;">
+        <a href="">
+          <svg width="16" height="16" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><g fill="#fff" fill-rule="evenodd"><path d="m5.189 13.04c0 .996-.791 1.804-1.767 1.804-.976 0-1.767-.808-1.767-1.804 0-.996.791-1.804 1.767-1.804.976 0 1.767.808 1.767 1.804"></path><path d="m14.912 2.259h-14.298l2.247 6.917c.042.129.16.216.293.216h8.06c-.064.69-.629 1.841-1.702 1.841h-6.04l1.072 1.991h5.611c1.881 0 2.938-2.278 3.657-4.719.888-3.01 1.219-6.245 1.106-6.245"></path><path d="m.615 2.259l-.592-1.828c-.08-.207.069-.431.287-.431h1.482c.126 0 .24.079.287.198l.682 2.061c0 0-.63 1.642-1.942.066"></path><path d="m2.262.756c0 0 .498 1.503 2.234 1.503l-1.736.749-1.104-.749.607-1.503"></path><path d="m13.424 13.325c0 .837-.664 1.516-1.484 1.516-.82 0-1.484-.679-1.484-1.516 0-.837.664-1.516 1.484-1.516.82 0 1.484.679 1.484 1.516"></path></g></svg>
+        </a>
+      </div>
+    <div class="col-2" style="text-align: end; text-decoration: none;">
+      <a  href="#"clasz style="color: #FFF;text-decoration: none;"> Login</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mt-2"> 
+      <div class="input-group ">
+        <span class="input-group-text" id="basic-addon2"> <svg width="15px" height="15px">
+          <path d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 "></path>
+          </svg>
+    </span>
+      <input type="text" class="form-control" placeholder="Search for Products, Brands and more" aria-label="Search for Products, Brands and more" aria-describedby="basic-addon2">
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</nav>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" >
+    <div class="top-link" >
+      <div class="sidebar-container">
+        <div class="row">
+          <div class="col-2 item-1"><img src="" alt=""><img style="width: 75%;"  src="image/sidebar_ac.svg" alt=""></div>
+          <div class="col-6 item-2" style="color: #FFF;"><h6>Login & Signup</h6></div>
+          <div class="col-3 item-3"><img src="" alt=""><img style="width: 40%;"  src="image/logo_lite.png" alt=""></div>
+        </div>
+      </div>
+    <div class="container-fluid sub-side-menu menu-moblie">      
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/41.png" alt=""> </div> <div class="col-10">SuperCoin Zone</div> </div>
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/42.png" alt=""> </div> <div class="col-10">Flipkart Plus Zone</div> </div>
+    <hr class="sidebar-line">
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/43.png" alt=""> </div> <div class="col-10">All Categories</div> </div>
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/44.png" alt=""> </div> <div class="col-10">Trending Stores  <!-- <span style="background-color: red; font-size: small; color: wheat; padding: 3px;">New</span>--></div> </div> 
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/45.jpg" alt=""> </div> <div class="col-10">More on Flipkart</div> </div>
+    <hr class="sidebar-line">
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/46.png" alt=""> </div> <div class="col-10">Choose Language</div> </div>
+    <hr class="sidebar-line">
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/offer-icon.png" alt=""> </div> <div class="col-10">Offer Zone</div> </div>
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/49.png" alt=""> </div> <div class="col-10">Sell on Flipkart</div> </div>
+    <hr class="sidebar-line">
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/50.png" alt=""> </div> <div class="col-10">My Orders</div> </div>
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/51.png" alt=""> </div> <div class="col-10">My Rewards</div> </div>
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/52.png" alt=""> </div> <div class="col-10">My Cart</div> </div>
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/53.png" alt=""> </div> <div class="col-10">My Wishlist</div> </div>
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/54.png" alt=""> </div> <div class="col-10">My Account</div> </div>
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/55.png" alt=""> </div> <div class="col-10">My Notofications</div> </div>
+    <div class="row "> <div class="col-2"> <img class="sidebar-icon"  src="image/56.png" alt=""> </div> <div class="col-10">My Chats</div> </div>
+    <div class="row "> <div class="col-12">Help Centre</div> </div>
+    <div class="row "> <div class="col-12" style="padding-bottom: 100%;"> Legal</div> </div>
+  </div>
+</div>
+<div class="mobile-bg-color" style="display: none;"></div>
+</div>
+
+
+
+  <!-- <div class="container-fluid" class="top-tag-bag"  id="top_tag_md_icon" style="background-color: white !important;">
+    <div class="container pt-2 pb-2">
+        <nav id="menu">
+          <div class="row">
+            <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+              <ul>
+                <li>
+                  <img class="sebmenuimg" src="image/icon/1.webp" alt="">
+                  <div class="menu-tag" >
+                    Top Offers
+                  </div>
+                </li>
+              </ul>   
+            </div>
+            <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+              <ul>
+                <li>
+                  <img class="sebmenuimg" src="image/icon/2.webp" alt="">
+                  <div class="menu-tag" >
+                    Grocery
+                  </div>
+                </li>
+              </ul>   
+            </div>
+            <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+                  <img class="sebmenuimg" src="image/icon/3.webp" alt="">
+                  <div class="menu-tag" >
+                    Mobile
+                  </div>
+           </div> 
+          
+            <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+              <ul>
+                <li>
+                  <img class="sebmenuimg" src="image/icon/4.webp" alt="">
+                  <div class="menu-tag" >
+                    Fashion
+                  </div>
+                 
+                </li>
+              </ul>   
+            </div>   
+            <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+              <ul>
+                <li>
+                  <img class="sebmenuimg" src="image/icon/5.webp" alt="">
+                  <div class="menu-tag" >
+                    Electronics
+                  </div>
+                  
+                </li>
+              </ul>   
+            </div>  
+            <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+              <ul>
+                <li>
+                  <img class="sebmenuimg" src="image/icon/6.webp" alt="">
+                  <div class="menu-tag" >
+                    Home
+                  </div>
+                 
+                </li>
+              </ul>   
+            </div>   
+            <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+              <ul>
+                <li>
+                  <img class="sebmenuimg" src="image/icon/7.webp" alt="">
+                  <div class="menu-tag" >
+                    Appliances
+                  </div>
+             
+                </li>
+              </ul>   
+            </div>  
+            <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+              <ul>
+                <li>
+                  <img class="sebmenuimg" src="image/icon/8.webp" alt="">
+                  <div class="menu-tag" >
+                    Travel 
+                  </div>
+                 
+                </li>
+              </ul>   
+            </div>   
+            <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+              <ul>
+                <li>
+                  <img class="sebmenuimg" src="image/icon/9.webp" alt="">
+                  <div class="menu-tag" >
+                    Beauty, Toys & More
+                  </div>
+                </li>
+              </ul>   
+            </div>   
+    </div>
+  </div>  
+ </div>   -->
+
+ <style>
+   .menu-tag:hover{
+    color: #2874f0;
+   }
+   .dropdown-tag:hover{
+    color: #2874f0;
+      }
+      
+ </style>
+ <div class="container-fluid" class="top-tag-bag" id="top-tag-md" style="background-color: white !important;">
+  <div class="container pt-4 pb-2">
+      <nav id="menu123">
+        <div class="row">
+          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+            <ul>
+                      
+            <li class="dropdown">
+              <a class=" dropdown-toggle" href="#" data-bs-toggle="dropdown"> Mega submenu </a>
+                <ul class="dropdown-menu">
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
+                  <div class="megasubmenu dropdown-menu">
+                    <p><a href="#">Custom Menu</a></p>
+                    <p><a href="#">Custom Menu</a></p>
+                    <p><a href="#">Custom Menu</a></p>
+                    <p><a href="#">Custom Menu</a></p>
+                </div>
+                </li>
+
+              <li class="has-megasubmenu">
+              <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
+              <div class="megasubmenu dropdown-menu">
+         
+                    <p><a href="#">Custom dfsdMenu</a></p>
+                    <p><a href="#">Custofsdfm Menu</a></p>
+                    <p><a href="#">Cussdftom Menu</a></p>
+                    <p><a href="#">Cussdfsdftom Menu</a></p>
+                 
+              </div>
+            </li>
+
+			 
+		    </ul>
+		</li>
+	
+              <!-- <li>
+                <img class="sebmenuimg" src="image/icon/1.webp" alt="">
+                <div class="menu-tag" >
+                  Top Offers 
+                </div>
+              </li> -->
+            </ul>   
+          </div>
+
+          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+            <ul>
+              <li>
+                <img class="sebmenuimg" src="image/icon/2.webp" alt="">
+                <div class="menu-tag" >
+                  Grocery 
+                </div>
+              </li>
+            </ul>   
+          </div>
+
+          </style>
+          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+            <ul>
+              <li>
+                <img class="sebmenuimg" src="image/icon/3.webp" alt="">
+                <div class="menu-tag" >
+                  Mobiles 
+                </div>
+                <ul>
+                  <li class="parent">
+                    <ul>
+                        <li class="dropdown-tag" ><a href="#">Men's Top Wear</a>
+                        <li class="dropdown-tag" ><a href="#">Men's Top Wear</a>  
+                        <li class="dropdown-tag" ><a href="#">Men's Top Wear</a>  
+                        <li class="dropdown-tag" ><a href="#">Men's Top Wear</a>
+                        <li class="dropdown-tag" ><a href="#">Men's Top Wear</a>  
+                        <li class="dropdown-tag" ><a href="#">Men's Top Wear</a>  
+                    </ul>
+                  </li>
+                  <li class="child">
+                    <ul class="sub-menu">
+                      <li><a class="dropdown-tag" href="#">ALL</a></li>
+                      <li><a class="dropdown-tag" href="#">Men's T-Shirts</a></li>
+                      <li><a class="dropdown-tag" href="#">Men's Casual Shirts</a></li>
+                      <li><a class="dropdown-tag" href="#">Men's Formal Shirts</a></li>
+                      <li><a class="dropdown-tag" href="#">Men's Kurtas</a></li>
+                      <li><a class="dropdown-tag" href="#">Men's Ethnic Sets</a></li>
+                      <li><a class="dropdown-tag" href="#">Men's Blazers
+                      <li><a class="dropdown-tag" href="#">Men's Raincoat</a></li>
+                      <li><a class="dropdown-tag" href="#">Men's Windcheaters</a></li>
+                      <li><a class="dropdown-tag" href="#">Men's Suit</a></li>
+                      <li><a class="dropdown-tag" href="#">Men's Fabrics</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <!-- <ul>
+                  <li class="dropdown-tag" ><a href="#">Men's Top Wear</a>
+                    <ul class="sub-menu">
+                        <li><a class="dropdown-tag" href="#">ALL</a></li>
+                        <li><a class="dropdown-tag" href="#">Men's T-Shirts</a></li>
+                        <li><a class="dropdown-tag" href="#">Men's Casual Shirts</a></li>
+                        <li><a class="dropdown-tag" href="#">Men's Formal Shirts</a></li>
+                        <li><a class="dropdown-tag" href="#">Men's Kurtas</a></li>
+                        <li><a class="dropdown-tag" href="#">Men's Ethnic Sets</a></li>
+                        <li><a class="dropdown-tag" href="#">Men's Blazers
+                        <li><a class="dropdown-tag" href="#">Men's Raincoat</a></li>
+                        <li><a class="dropdown-tag" href="#">Men's Windcheaters</a></li>
+                        <li><a class="dropdown-tag" href="#">Men's Suit</a></li>
+                        <li><a class="dropdown-tag" href="#">Men's Fabrics</a></li>
+                    </ul>
+                  <li><a href="#" class="dropdown-tag">Men's Bottom Wear</a>
+                    <ul class="sub-menu">
+                      <li><a class="dropdown-tag"href="#">ALL</a></li>
+                      <li><a class="dropdown-tag"href="#">Men's Jeans</a></li>
+                      <li><a class="dropdown-tag"href="#">Men's Trousers</a></li>
+                      <li><a class="dropdown-tag"href="#">Men's Trackpants</a></li>
+                      <li><a class="dropdown-tag"href="#">Men's shorts</a></li>
+                      <li><a class="dropdown-tag"href="#">Men's Cargo</a></li>
+                      <li><a class="dropdown-tag"href="#">Men's Threefouths</a></li>
+                      <li><a class="dropdown-tag"href="#">Men's Pyjamas & Loungepants</a></li>
+                      <li><a class="dropdown-tag"href="#">Men's Dhoti</a></li>
+                      <li><a class="dropdown-tag"href="#">Men's Ethnic Pyjama</a></li>
+                    </ul>
+                  </li>
+                </ul> -->
+              </li>
+            </ul>   
+          </div>  
+          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+            <ul>
+              <li>
+                <img class="sebmenuimg" src="image/icon/4.webp" alt="">
+                <div class="menu-tag" >
+                  Fashion 
+                </div>
+                <ul>
+                  <li><a href="#">Men's Top Wear</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">ALL</a></li>
+                        <li><a href="#">Men's T-Shirts</a></li>
+                        <li><a href="#">Men's Casual Shirts</a></li>
+                        <li><a href="#">Men's Formal Shirts</a></li>
+                        <li><a href="#">Men's Kurtas</a></li>
+                        <li><a href="#">Men's Ethnic Sets</a></li>
+                        <li><a href="#">Men's Blazers
+                        <li><a href="#">Men's Raincoat</a></li>
+                        <li><a href="#">Men's Windcheaters</a></li>
+                        <li><a href="#">Men's Suit</a></li>
+                        <li><a href="#">Men's Fabrics</a></li>
+                    </ul>
+                  <li><a href="#">Men's Bottom Wear</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">ALL</a></li>
+                      <li><a href="#">Men's Jeans</a></li>
+                      <li><a href="#">Men's Trousers</a></li>
+                      <li><a href="#">Men's Trackpants</a></li>
+                      <li><a href="#">Men's shorts</a></li>
+                      <li><a href="#">Men's Cargo</a></li>
+                      <li><a href="#">Men's Threefouths</a></li>
+                      <li><a href="#">Men's Pyjamas & Loungepants</a></li>
+                      <li><a href="#">Men's Dhoti</a></li>
+                      <li><a href="#">Men's Ethnic Pyjama</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>   
+          </div>   
+          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+            <ul>
+              <li>
+                <img class="sebmenuimg" src="image/icon/5.webp" alt="">
+                <div class="menu-tag" >
+                  Electronics 
+                </div>
+                <ul>
+                  <li><a href="#">Men's Top Wear</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">ALL</a></li>
+                        <li><a href="#">Men's T-Shirts</a></li>
+                        <li><a href="#">Men's Casual Shirts</a></li>
+                        <li><a href="#">Men's Formal Shirts</a></li>
+                        <li><a href="#">Men's Kurtas</a></li>
+                        <li><a href="#">Men's Ethnic Sets</a></li>
+                        <li><a href="#">Men's Blazers
+                        <li><a href="#">Men's Raincoat</a></li>
+                        <li><a href="#">Men's Windcheaters</a></li>
+                        <li><a href="#">Men's Suit</a></li>
+                        <li><a href="#">Men's Fabrics</a></li>
+                    </ul>
+                  <li><a href="#">Men's Bottom Wear</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">ALL</a></li>
+                      <li><a href="#">Men's Jeans</a></li>
+                      <li><a href="#">Men's Trousers</a></li>
+                      <li><a href="#">Men's Trackpants</a></li>
+                      <li><a href="#">Men's shorts</a></li>
+                      <li><a href="#">Men's Cargo</a></li>
+                      <li><a href="#">Men's Threefouths</a></li>
+                      <li><a href="#">Men's Pyjamas & Loungepants</a></li>
+                      <li><a href="#">Men's Dhoti</a></li>
+                      <li><a href="#">Men's Ethnic Pyjama</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>   
+          </div>  
+          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+            <ul>
+              <li>
+                <img class="sebmenuimg" src="image/icon/6.webp" alt="">
+                <div class="menu-tag" >
+                  Home 
+                </div>
+                <ul>
+                  <li><a href="#">Men's Top Wear</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">ALL</a></li>
+                        <li><a href="#">Men's T-Shirts</a></li>
+                        <li><a href="#">Men's Casual Shirts</a></li>
+                        <li><a href="#">Men's Formal Shirts</a></li>
+                        <li><a href="#">Men's Kurtas</a></li>
+                        <li><a href="#">Men's Ethnic Sets</a></li>
+                        <li><a href="#">Men's Blazers
+                        <li><a href="#">Men's Raincoat</a></li>
+                        <li><a href="#">Men's Windcheaters</a></li>
+                        <li><a href="#">Men's Suit</a></li>
+                        <li><a href="#">Men's Fabrics</a></li>
+                    </ul>
+                  <li><a href="#">Men's Bottom Wear</a>
+                    <ul class="sub-menu">
+                      <li><a href="#">ALL</a></li>
+                      <li><a href="#">Men's Jeans</a></li>
+                      <li><a href="#">Men's Trousers</a></li>
+                      <li><a href="#">Men's Trackpants</a></li>
+                      <li><a href="#">Men's shorts</a></li>
+                      <li><a href="#">Men's Cargo</a></li>
+                      <li><a href="#">Men's Threefouths</a></li>
+                      <li><a href="#">Men's Pyjamas & Loungepants</a></li>
+                      <li><a href="#">Men's Dhoti</a></li>
+                      <li><a href="#">Men's Ethnic Pyjama</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>   
+          </div>   
+          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+            <ul>
+              <li>
+                <img class="sebmenuimg" src="image/icon/7.webp" alt="">
+                <div class="menu-tag" >
+                  Appliances 
+                </div>
+              </li>
+            </ul>   
+          </div>  
+          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+            <ul>
+              <li>
+                <img class="sebmenuimg" src="image/icon/8.webp" alt="">
+                <div class="menu-tag" >
+                  Travel
+                </div>
+              </li>
+            </ul>   
+          </div>   
+          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+            <ul>
+              <li>
+                <img class="sebmenuimg" src="image/icon/9.webp" alt="">
+                <div class="menu-tag" >
+                  Beauty, Toys & More
+                </div>
+              </li>
+            </ul>   
+          </div>
+
+        </div>
+      </nav>
+  </div>
+</div>  
+ 
+<div class="container-fluid" class="sm-tag-icon" id="sm-tag-icons" style="background-color: white !important;">
+  <div id="owl-carousel_sm" class="container pt-1 pb-1">
+      <section id="client">
+        <div class="owl-carousel owl-theme">
+          <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/aaaaa.jpg"></a></div>
+            <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/aaa.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/21.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/22.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/23.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/24.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/25.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/26.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/27.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/28.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/29.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/30.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/31.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/32.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/33.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/34.jpg"></a></div>
+              <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/35.jpg"></a></div>
+            </div>
+      </section>
+  </div>
+</div>
+<div class="container-fluid slider_moblie" class="top-tag-bag"  style="background-color: white !important;">
+  <div id="owl-carousel_offer" style="margin-top: -45px;" class="container pt-4 pb-2">
+  <section id="offer">
+  <div class="owl-carousel owl-theme">
+  <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/sm1.jpg"></a></div>
+    <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/sm2.jpeg"></a></div>
+    <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/sm3.jpg"></a></div>
+    <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/sm4.jpg"></a></div>
+  </div>
+   </section>
+  </div>
+  </div>
+  
+  <div class="mycontainer mt-2 mb-2 pc_slider">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-control-prev" id="prev" style="margin-top: -87px;" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" > <div class='nav-btn prev-slide prev-btn'><svg width='14.6' height='27' viewBox='0 0 16 27' xmlns='http://www.w3.org/2000/svg' class='FXox6K'><path d='M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z' fill='#000' class='FXox6K'></path></svg></div> </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/icon/b1.jpg" class="d-block w-100" alt="..."></a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/icon/b2.jpg" class="d-block w-100" alt="..."></a>
+      </div>
+      <div class="carousel-item">
+        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/icon/b3.jpg" class="d-block w-100" alt="..."></a>
+      </div>
+    </div>
+   <div class="carousel-control-next" id="next"   style="margin-top: -87px;" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"><div class='next-btn nav-btn next-slide'><svg width='14.6' style='transform: rotate(180deg);' height='27' viewBox='0 0 16 27' xmlns='http://www.w3.org/2000/svg' class='_2-wzdc'><path d='M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z' fill='#000' class='FXox6K'></path></svg></div></div>
+  </div>
+  <div>
+  </div>
+</div>
+
+  <div class="mycontainer mt-2 mb-2" id="offer_banner_md" style="background-color: white; ">
+    <a href="https://www.flipkart.com/" class="p-link"><img  class="pt-3 pb-3" style="width: 100%;" src="image/subbanner.webp" alt=""></a>
+  </div>
+  <div class="container-fluid mt-2 mb-2" id="offer_banner_sm" style="background-color: white; ">
+    <a href="https://www.flipkart.com/" class="p-link"><img  class="pt-3 pb-3" style="width: 100%;" src="image/extra50.jpg" alt=""></a>
+  </div>
+
+<!-- 
+  <div class="mycontainer mt-2 mb-2" >
+    <div class="row align-items-center">
+      <div class="col-md-10 col-sm-12" style="background-color: white; ">
+          <div class="offerbar mb-0 pb-0" >
+              <div class="offerbar-item1"><h6>Top Offers</h6></div>
+              <div class="offerbar-item2"><button type="button" style="padding:  10px 30px; border: 0px; border-radius: 0px;" class="btn btn-primary">View</button></div>
+          </div>
+        <hr>
+        <div class="main-slide row mt-4" style="text-align:center">
+          <div class="carousel-wrap">
+            <div class="owl-carousel owl-theme">    
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                    <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/1.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                   <a href="https://www.flipkart.com/" class="p-link"> <span class="product-title">Role Play Toys</span><br></a>
+                   <a href="https://www.flipkart.com/" class="p-link"> <span class="product-price">Under ₹ 699</span><br></a>
+                   <a href="https://www.flipkart.com/" class="p-link"> <span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                    <a href="https://www.flipkart.com/" class="p-link">   <img src="image/first/2.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                     <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/3.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                      <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/4.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                      <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/5.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                      <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/6.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                     <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/7.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+          </div> 
+        </div>
+      </div> 
+    </div>
+    <div class="col-md- col-sm-12" style="background-color: white; "><div style="overflow: hidden; object-fit: cover;"><a href="https://www.flipkart.com/" class="p-link"><img style="height: 80%;width: 100%;padding: 10px;" src="image/boat.webp" alt=""></a></div> </div>
+    </div>
+    </div> -->
+
+<div class="mycontainer mt-2 mb-2" style="background-color: white; ">
+<div class="row align-items-center">
+  <div class="col-md-2 col-sm-12" style="text-align: center;" >
+    <h4 class="top-offer-tag ">TOP Offer</h4>
+    <div style="text-align: center;"><button type="button" class="btn btn-primary">VIEW ALL</button></div>
+    <div class="mt-4" style=" height: 100%; overflow: hidden;"><img class="side-banner" style="width: 100%;" src="image/org.jpg" alt=""></div>
+  </div>
+  <div class="col-md-8 col-sm-12">
+    <div class="main-slide row" style="text-align:center">
+      <div class="carousel-wrap">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/1.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+               <a href="https://www.flipkart.com/" class="p-link"> <span class="product-title">Role Play Toys</span><br></a>
+               <a href="https://www.flipkart.com/" class="p-link"> <span class="product-price">Under ₹ 699</span><br></a>
+               <a href="https://www.flipkart.com/" class="p-link"> <span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                <a href="https://www.flipkart.com/" class="p-link">   <img src="image/first/2.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                 <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/3.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/4.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/5.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/6.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                 <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/7.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+      </div> 
+    </div>
+  </div> 
+</div>
+<div class="col-md-2 col-sm-12">  <div style="overflow: hidden; object-fit: cover;"><a href="https://www.flipkart.com/" class="p-link"><img style="height: 80%;width: 100%;padding: 10px;" src="image/boat.webp" alt=""></a></div></div>
+</div>
+</div>
+
+<div class="container mt-2 mb-2 moblie-banne">
+  <img class="moblie-banne" src="image/moblie-banner-blue.jpg" alt="">
+</div>
+
+<div class="mycontainer mt-2 mb-2 pt-1 pb-1" >
+  <div class="row"> 
+    <div  class="col-12 col-md-4 pt-3"><a href="https://www.flipkart.com/" class="p-link"><img src="image/b6.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-12 col-md-4 pt-3"><a href="https://www.flipkart.com/" class="p-link"><img src="image/b5.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-12 col-md-4 pt-3"><a href="https://www.flipkart.com/" class="p-link"><img src="image/b4.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-12 col-md-4 pt-3"><a href="https://www.flipkart.com/" class="p-link"><img src="image/b3.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-12 col-md-4 pt-3"><a href="https://www.flipkart.com/" class="p-link"><img src="image/b2.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-12 col-md-4 pt-3"><a href="https://www.flipkart.com/" class="p-link"><img src="image/b1.jpeg" class="mysub-banner" alt=""></a></div>
+  </div>
+</div>
+
+ <div class="mycontainer mt-2 mb-2" style="background-color: white; ">
+  <div class="row">
+    <div class="col-md-2 col-sm-12" style="text-align: center;" >
+      <h3 class="top-offer-tag mt-2" >Top Deals on Fashion</h3><p style="text-align: center;"> </p>
+      <div style="text-align: center;"><button type="button" class="btn btn-primary">VIEW ALL</button></div>
+      <div class="mt-4" style=" height: 100%; overflow: hidden;"><img  class="side-banner" style="width: 100%;" src="image/parpal.jpg" alt=""></div>
+    </div>
+    <div class="col-md-10 col-sm-12">
+      <div class="main-slide row mt-4" style="text-align:center">
+        <div class="carousel-wrap">
+          <div class="owl-carousel owl-theme">
+  
+         <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/1.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+               <a href="https://www.flipkart.com/" class="p-link"> <span class="product-title">Role Play Toys</span><br></a>
+               <a href="https://www.flipkart.com/" class="p-link"> <span class="product-price">Under ₹ 699</span><br></a>
+               <a href="https://www.flipkart.com/" class="p-link"> <span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                <a href="https://www.flipkart.com/" class="p-link">   <img src="image/first/2.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                 <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/3.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/4.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/5.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/6.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                 <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/7.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><b</a>r></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div> 
+  
+  </div>
+</div>
+</div>
+<div class="mycontainer mt-2 mb-2" >
+  <div class="row demo" style="margin: 0px;">
+    <div class="col-md-10 col-sm-12" style=" background-color: #FFF;">
+      <div class="row">
+        <div class="offerbar mb-0 pb-0" >
+          <div class="offerbar-item1"><h4 style="margin-top: 10px; margin-left: 5px;">Top Offers</h4></div>
+          <div class="offerbar-item2"><button type="button" style="padding:  10px 30px; border: 0px; border-radius: 0px;" class="btn btn-primary">View</button></div>
+        </div>
+      </div>
+      <hr class="mb-0">
+      <div class="row" style="margin: 5px;">
+        <div class="main-slide row mt-4" style="text-align:center">
+          <div class="carousel-wrap">
+            <div class="owl-carousel owl-theme">    
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                    <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/1.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                   <a href="https://www.flipkart.com/" class="p-link"> <span class="product-title">Role Play Toys</span><br></a>
+                   <a href="https://www.flipkart.com/" class="p-link"> <span class="product-price">Under ₹ 699</span><br></a>
+                   <a href="https://www.flipkart.com/" class="p-link"> <span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                    <a href="https://www.flipkart.com/" class="p-link">   <img src="image/first/2.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                     <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/3.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                      <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/4.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                      <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/5.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                      <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/6.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="item">
+                <div class="card" style="width: 100%; align-items: center;">
+                  <div class="img-inner">
+                     <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/7.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                  </div>
+                  <div class="card-body">
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                    <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                  </div>
+                </div>
+              </div>
+          </div> 
+        </div>
+      </div> 
+      </div>
+    </div>
+    <div class="col-md-2" style="padding-right: 0px;">
+      <div style="height: 100%; background-color: #FFF; padding-right: 0px;">
+        <a href="https://www.flipkart.com/" class="p-link">
+          <img style="height: 100%;width: 100%;padding: 10px;" src="image/boat.webp" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mycontainer mt-1 mb-1 pt-1 pb-1" >
+  <div class="row"> 
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/f12.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/realme8.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/ac.jpeg" class="mysub-banner" alt=""></a></div>
+  </div>
+</div>
+
+<div class="mycontainer mt-1 mb-1 pt-1 pb-1" style="background-color: white; ">
+  <div class="row mt-1" style="margin: 5px 5px;"> 
+    <div class="row" style="margin: 5px 5px;"><h5>Featured Brands</h5></div>
+    <div  class="col-md-3 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/boat2699.jpeg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-3 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/lgac.jpeg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-3 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/ifb.jpeg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-3 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/leptop.jpeg" class="mysub-banner" alt=""></a></div>
+  </div>
+</div>
+
+
+<div class="mycontainer mt-1 mb-1 pt-1 pb-1" >
+  <div class="row"> 
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/phileps.jpeg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/refrigerator.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/ac.jpeg" class="mysub-banner" alt=""></a></div>
+  </div>
+</div>
+
+<div class="mycontainer mt-2 mb-2" style="background-color: white; ">
+  <div class="row">
+    <div class="col-md-2 col-sm-12" style="text-align: center;" >
+      <h3 class="top-offer-tag mt-2" >Top Deals on Fashion</h3><p style="text-align: center;"> </p>
+      <div style="text-align: center;"><button type="button" class="btn btn-primary">VIEW ALL</button></div>
+      <div class="mt-4" style=" height: 100%; overflow: hidden;"><img class="side-banner" style="width: 100%;" src="image/pink.jpg" alt=""></div>
+    </div>
+    <div class="col-md-10 col-sm-12">
+      <div class="main-slide row mt-4" style="text-align:center">
+        <div class="carousel-wrap">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/1.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                 <a href="https://www.flipkart.com/" class="p-link"> <span class="product-title">Role Play Toys</span><br></a>
+                 <a href="https://www.flipkart.com/" class="p-link"> <span class="product-price">Under ₹ 699</span><br></a>
+                 <a href="https://www.flipkart.com/" class="p-link"> <span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link">   <img src="image/first/2.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                   <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/3.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                    <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/4.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                    <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/5.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                    <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/6.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                   <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/7.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><b</a>r></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+        </div> 
+      </div>
+    </div> 
+  
+  </div>
+</div>
+</div>
+
+  <div class="mycontainer mt-2 mb-2">
+    <div class="row"> 
+      <div  class="col-md-3 col-sm-12" style="padding: 0px 6px; border-radius: 20px;"><a href="https://www.flipkart.com/" class="p-link"><img src="image/price4.jpg" class="mysub-banner" alt=""></a></div>
+      <div  class="col-md-3 col-sm-12" style="padding: 0px 6px; border-radius: 20px;"><a href="https://www.flipkart.com/" class="p-link"><img src="image/price3.jpg" class="mysub-banner" alt=""></a></div>
+      <div  class="col-md-3 col-sm-12" style="padding: 0px 6px; border-radius: 20px;"><a href="https://www.flipkart.com/" class="p-link"><img src="image/price2.jpg" class="mysub-banner" alt=""></a></div>
+      <div  class="col-md-3 col-sm-12" style="padding: 0px 6px; border-radius: 20px;"><a href="https://www.flipkart.com/" class="p-link"><img src="image/price1.jpg" class="mysub-banner" alt=""></a></div>
+    </div>
+  </div>
+
+  <div class="mycontainer mt-1 mb-1 pt-1 pb-1" >
+    <div class="row"> 
+      <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/pococ31.jpg" class="mysub-banner" alt=""></a></div>
+      <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/toptv.jpg" class="mysub-banner" alt=""></a></div>
+      <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/spacesaving funiture.jpg" class="mysub-banner" alt=""></a></div>
+    </div>
+  </div>
+
+
+  <div class="mycontainer mt-2 mb-2" style="background-color: white; ">
+    <div class="row">
+      <div class="col-md-2 col-sm-12" style="text-align: center;" >
+        <h3 class="top-offer-tag mt-2" >Top Deals on Fashion</h3><p style="text-align: center;"> </p>
+        <div style="text-align: center;"><button type="button" class="btn btn-primary">VIEW ALL</button></div>
+        <div class="mt-4" style=" height: 100%; overflow: hidden;"><img style="width: 100%;" src="image/parpal.jpg" alt=""></div>
+      </div>
+      <div class="col-md-10 col-sm-12">
+        <div class="main-slide row mt-4" style="text-align:center">
+          <div class="carousel-wrap">
+            <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                <a href="https://www.flipkart.com/" class="p-link"> <img class="side-banner" src="image/first/1.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+               <a href="https://www.flipkart.com/" class="p-link"> <span class="product-title">Role Play Toys</span><br></a>
+               <a href="https://www.flipkart.com/" class="p-link"> <span class="product-price">Under ₹ 699</span><br></a>
+               <a href="https://www.flipkart.com/" class="p-link"> <span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                <a href="https://www.flipkart.com/" class="p-link">   <img src="image/first/2.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                 <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/3.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/4.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/5.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/6.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="card" style="width: 100%; align-items: center;">
+              <div class="img-inner">
+                 <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/7.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+              </div>
+              <div class="card-body">
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>
+            </div>
+          </div>
+          </div> 
+        </div>
+      </div> 
+    
+    </div>
+  </div>
+  </div>
+
+
+
+<div class="mycontainer mt-1 mb-1 pt-1 pb-1" >
+  <div class="row"> 
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/premiummachine.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/toptv.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/best-selling.jpg" class="mysub-banner" alt=""></a></div>
+  </div>
+</div>
+
+<div class="mycontainer mt-1 mb-1 pt-1 pb-1" style="background-color: white; ">
+  <div class="row mt-1" style="margin: 5px 5px;"> 
+    <div class="row" style="margin: 5px 5px;"><h5>Featured Brands</h5></div>
+    <div  class="col-md-3 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/prestige.jpeg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-3 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/realme.jpeg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-3 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/fireboltt.jpeg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-3 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/realmetechlife.jpeg" class="mysub-banner" alt=""></a></div>
+  </div>
+</div>
+
+<div class="mycontainer mt-1 mb-1 pt-1 pb-1" >
+  <div class="row"> 
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/saledhamaka.jpeg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/biggest deals.jpeg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/electricalhardware.jpeg" class="mysub-banner" alt=""></a></div>
+  </div>
+</div>
+
+
+<div class="mycontainer mt-1 mb-1 pt-1 pb-1" >
+  <div class="row"> 
+    <div  class="col-md-3 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/a1.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-3 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/a2.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-3 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/a3.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-3 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/a4.jpg" class="mysub-banner" alt=""></a></div>
+  </div>
+</div>
+
+<div class="mycontainer mt-1 mb-1 pt-1 pb-1" >
+  <div class="row"> 
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/popularrefurbishedphone.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/grabrefubished.jpg" class="mysub-banner" alt=""></a></div>
+    <div  class="col-md-4 col-sm-12 pt-1"><a href="https://www.flipkart.com/" class="p-link"><img src="image/grabpocket frendly.jpg" class="mysub-banner" alt=""></a></div>
+  </div>
+</div> -->
+
+
+
+    <div class="mycontainer mt-2 mb-2" style="background-color: white; ">
+      <div class="row">
+        <div class="col-md-2 col-sm-12" style="text-align: center;" >
+          <h3 class="top-offer-tag mt-2" >Top Deals on Fashion</h3><p style="text-align: center;"> </p>
+          <div style="text-align: center;"><button type="button" class="btn btn-primary">VIEW ALL</button></div>
+          <div class="mt-4" style=" height: 100%; overflow: hidden;"><img class="side-banner" style="width: 100%;" src="image/pink.jpg" alt=""></div>
+        </div>
+            <div class="col-md-10 col-sm-12">
+              <div class="main-slide row mt-4" style="text-align:center">
+                <div class="carousel-wrap">
+                  <div class="owl-carousel owl-theme">
+                 <div class="item">
+                    <div class="card" style="width: 100%; align-items: center;">
+                      <div class="img-inner">
+                        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/1.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                      </div>
+                      <div class="card-body">
+                       <a href="https://www.flipkart.com/" class="p-link"> <span class="product-title">Role Play Toys</span><br></a>
+                       <a href="https://www.flipkart.com/" class="p-link"> <span class="product-price">Under ₹ 699</span><br></a>
+                       <a href="https://www.flipkart.com/" class="p-link"> <span class="product-more">Explore More</span><br></a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="item">
+                    <div class="card" style="width: 100%; align-items: center;">
+                      <div class="img-inner">
+                        <a href="https://www.flipkart.com/" class="p-link">   <img src="image/first/2.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="item">
+                    <div class="card" style="width: 100%; align-items: center;">
+                      <div class="img-inner">
+                         <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/3.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="card" style="width: 100%; align-items: center;">
+                      <div class="img-inner">
+                          <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/4.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="item">
+                    <div class="card" style="width: 100%; align-items: center;">
+                      <div class="img-inner">
+                          <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/5.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <div class="card" style="width: 100%; align-items: center;">
+                      <div class="img-inner">
+                          <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/6.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="item">
+                    <div class="card" style="width: 100%; align-items: center;">
+                      <div class="img-inner">
+                         <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/7.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                        <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+  
+  </div>
+</div>
+</div>
+
+  <div class="mycontainer mt-3">
+    <div class="row"> 
+      <div  class="col-md-4 col-sm-12 "><a href="https://www.flipkart.com/" class="p-link"><img src="image/furniturebestsellers.jpg" class="mysub-banner" alt=""></a></div>
+      <div  class="col-md-4 col-sm-12 "><a href="https://www.flipkart.com/" class="p-link"><img src="image/collapsiblewardrobes.jpg" class="mysub-banner" alt=""></a></div>
+      <div  class="col-md-4 col-sm-12 "><a href="https://www.flipkart.com/" class="p-link"><img src="image/hammocksqings.jpg" class="mysub-banner" alt=""></a></div>
+    </div>
+  </div>
+  
+  <div class="mycontainer mt-3">
+    <div class="row"> 
+      <div  class="col-md-4 col-sm-12 "><a href="https://www.flipkart.com/" class="p-link"><img src="image/flyeasyonyouprcket.jpg" class="mysub-banner" alt=""></a></div>
+      <div  class="col-md-4 col-sm-12 "><a href="https://www.flipkart.com/" class="p-link"><img src="image/musical instruments.jpg" class="mysub-banner" alt=""></a></div>
+      <div  class="col-md-4 col-sm-12 "><a href="https://www.flipkart.com/" class="p-link"><img src="image/headphone.jpeg" class="mysub-banner" alt=""></a></div>
+    </div>
+  </div>
+      
+<div class="mycontainer mt-2 mb-2" style="background-color: white; ">
+  <div class="row">
+    <div class="col-md-2 col-sm-12" style="text-align: center;" >
+      <h3 style="margin-top:25%;">Best selling Furniture</h3>
+      <div style="text-align: center;"><button type="button" class="btn btn-primary">VIEW ALL</button></div>
+      <div class="mt-4" style=" height: 100%; overflow: hidden;"><img class="side-banner" style="width: 100%;" src="image/parpal.jpg" alt=""></div>
+    </div>
+
+    <div class="col-md-10 col-sm-12">
+      <div class="main-slide row mt-4" style="text-align:center">
+        <div class="carousel-wrap">
+          <div class="owl-carousel owl-theme">
+            \ 	<div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/1.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                 <a href="https://www.flipkart.com/" class="p-link"> <span class="product-title">Role Play Toys</span><br></a>
+                 <a href="https://www.flipkart.com/" class="p-link"> <span class="product-price">Under ₹ 699</span><br></a>
+                 <a href="https://www.flipkart.com/" class="p-link"> <span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                  <a href="https://www.flipkart.com/" class="p-link">   <img src="image/first/2.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                   <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/3.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                    <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/4.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                    <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/5.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                    <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/6.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="card" style="width: 100%; align-items: center;">
+                <div class="img-inner">
+                   <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/7.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                </div>
+                <div class="card-body">
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                  <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                </div>
+              </div>
+            </div>
+        </div> 
+      </div>
+    </div> 
+  
+  </div>
+</div>
+</div>
+
+    <div class="mycontainer mt-3">
+      <div class="row"> 
+        <div  class="col-md-4 col-sm-12 "><img src="image/pococ31.jpg" class="mysub-banner" alt=""></div>
+        <div  class="col-md-4 col-sm-12 "><img src="image/samsungf12.jpg" class="mysub-banner" alt=""></div>
+        <div  class="col-md-4 col-sm-12 "><img src="image/realme9.jpg" class="mysub-banner" alt=""></div>
+      </div>
+    </div>
+
+    <div class="mycontainer mt-2 mb-2" style="background-color: white; ">
+      <div class="row">
+        <div class="col-md-2 col-sm-12" style="text-align: center;" >
+          <h3 class="top-offer-tag mt-2" >Top Deals on Fashion</h3><p style="text-align: center;"> </p>
+          <div style="text-align: center;"><button type="button" class="btn btn-primary">VIEW ALL</button></div>
+          <div class="mt-4" style=" height: 100%; overflow: hidden;"><img  class="side-banner" style="width: 100%;" src="image/org.jpg" alt=""></div>
+        </div>
+        <div class="col-md-10 col-sm-12">
+          <div class="main-slide row mt-4" style="text-align:center">
+            <div class="carousel-wrap">
+              <div class="owl-carousel owl-theme">
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                      <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/1.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                     <a href="https://www.flipkart.com/" class="p-link"> <span class="product-title">Role Play Toys</span><br></a>
+                     <a href="https://www.flipkart.com/" class="p-link"> <span class="product-price">Under ₹ 699</span><br></a>
+                     <a href="https://www.flipkart.com/" class="p-link"> <span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                      <a href="https://www.flipkart.com/" class="p-link">   <img src="image/first/2.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                       <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/3.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/4.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/5.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/6.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                       <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/7.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+            </div> 
+          </div>
+        </div> 
+      
+      </div>
+    </div>
+    </div>
+
+      
+    <div class="mycontainer mt-2 mb-2" style="background-color: white; ">
+      <div class="row">
+        <div class="col-md-2 col-sm-12" style="text-align: center;" >
+          <h3 class="top-offer-tag mt-2" >Top Deals on Fashion</h3><p style="text-align: center;"> </p>
+          <div style="text-align: center;"><button type="button" class="btn btn-primary">VIEW ALL</button></div>
+          <div class="mt-4" style=" height: 100%; overflow: hidden;"><img class="side-banner" style="width: 100%;" src="image/pink.jpg" alt=""></div>
+        </div>
+        <div class="col-md-10 col-sm-12">
+          <div class="main-slide row mt-4" style="text-align:center">
+            <div class="carousel-wrap">
+              <div class="owl-carousel owl-theme">
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                      <a href="https://www.flipkart.com/" class="p-link"> <img  src="image/first/1.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                     <a href="https://www.flipkart.com/" class="p-link"> <span class="product-title">Role Play Toys</span><br></a>
+                     <a href="https://www.flipkart.com/" class="p-link"> <span class="product-price">Under ₹ 699</span><br></a>
+                     <a href="https://www.flipkart.com/" class="p-link"> <span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                      <a href="https://www.flipkart.com/" class="p-link">   <img src="image/first/2.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                       <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/3.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/4.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/5.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/6.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="item">
+                  <div class="card" style="width: 100%; align-items: center;">
+                    <div class="img-inner">
+                       <a href="https://www.flipkart.com/" class="p-link">  <img src="image/first/7.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                      <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+                    </div>
+                  </div>
+                </div>
+            </div> 
+          </div>
+        </div> 
+      </div>
+    </div>
+    </div>
+
+        <div class="my-footer-container  mb-2 pt-1 pb-1">
+          <div class="row"> 
+            <div  class="col-md-3 col-sm-12 pt-3"> <a href="https://www.flipkart.com/" class="p-link"><img src="image/d4.jpg" class="mysub-banner" alt=""></a></div>
+            <div  class="col-md-3 col-sm-12 pt-3"> <a href="https://www.flipkart.com/" class="p-link"><img src="image/d3.jpg" class="mysub-banner" alt=""></a></div>
+            <div  class="col-md-3 col-sm-12 pt-3"> <a href="https://www.flipkart.com/" class="p-link"><img src="image/d2.jpg" class="mysub-banner" alt=""></a></div>
+            <div  class="col-md-3 col-sm-12 pt-3"> <a href="https://www.flipkart.com/" class="p-link"><img src="image/d1.jpg" class="mysub-banner" alt=""></a></div>
+          </div>
+        </div>
+        <div class="mycontainer">
+          <div class="row"> 
+            <div  class="col-md-4 col-sm-12"> <a href="https://www.flipkart.com/" class="p-link"><img src="image/hometemples.jpg" class="mysub-banner" alt=""></a></div>
+            <div  class="col-md-4 col-sm-12"> <a href="https://www.flipkart.com/" class="p-link"><img src="image/best-sellingbeds.jpg" class="mysub-banner" alt=""></a></div>
+            <div  class="col-md-4 col-sm-12"> <a href="https://www.flipkart.com/" class="p-link"><img src="image/xl.jpg" class="mysub-banner" alt=""></a></div>
+          </div>
+        </div>
+        <div class="mycontainer mt-3">
+          <div class="row"> 
+            <div  class="col-md-4 col-sm-12 "> <a href="https://www.flipkart.com/" class="p-link"><img src="image/ultrahighdiscount.jpg" class="mysub-banner" alt=""></a></div>
+            <div  class="col-md-4 col-sm-12 "> <a href="https://www.flipkart.com/" class="p-link"><img src="image/season's best deals.jpeg" class="mysub-banner" alt=""></a></div>
+            <div  class="col-md-4 col-sm-12 "> <a href="https://www.flipkart.com/" class="p-link"><img src="image/orient.jpeg" class="mysub-banner" alt=""></a></div>
+          </div>
+        </div>
+        <style>
+        /* .link-tag{
+          text-decoration: none;
+          color: gray;
+          border-left: 2px solid gray;
+          padding-left: 5px;
+        }
+
+        .link-title{
+          text-decoration: none;
+          color: gray;
+          padding-left: 5px;
+          font-size: small;
+        } */
+        .foote-link-title{
+          font-size: small;
+          font-weight:800;
+        }
+
+        .flt-a{
+          color:dimgrey;
+        }
+        
+        .flt-b{
+          color:rgb(70, 70, 70);
+        }
+        .link-title{
+          color:dimgrey;
+          font-weight: 200;
+          font-size: small;
+          text-decoration: none;
+        }
+        .link-title:hover{
+          color: #848484;
+          font-weight: 200;
+          font-size: small;
+          text-decoration: none;
+        }
+
+        .link-tag{
+          color: #525252;
+          font-size: small;
+          text-decoration: none;
+          border-left: 2px solid gray;
+          padding-left: 5px;
+        }
+        .link-tag:hover{
+          color: #525252;
+          font-size: small;
+          text-decoration: none;
+          border-left: 2px solid gray;
+          padding-left: 5px;
+        }
+
+        .footer-tag-line{
+          color: #959595;
+          font-size: medium;
+          font-weight: 800;
+          text-decoration: none;
+        }
+        .footer-tag-line-title{
+          color: #727272;
+          font-size: small;
+          font-weight: 800;
+          text-decoration: none;
+        }
+      
+
+        </style>
+
+   <div class="container-fluid mt-4  pb-4" style="background-color: white;">
+        <br>
+        <div class="row"> <span class="foote-link-title"><span class="flt-a">Top Stories:</span> <span class="flt-b">Brand Directory</span></span></div><br>
+       <div>
+        <a class="link-title" href=""> <span>MOST SEARCHED FOR ON FLIPKART:</span>
+        <a class="link-tag" href="#">  OPPO A16K</a>
+         <a class="link-tag" href="#"> Vivo Y33T</a>
+         <a class="link-tag" href="#"> OPPO Reno7 </a>
+         <a class="link-tag" href="#"> 5GOPPO Reno7</a>
+         <a class="link-tag" href="#">  Pro 5GiPhone </a>
+          <a class="link-tag" href="#"> 13iPhone 13 </a>
+          <a class="link-tag" href="#"> ProiPhone 13 Pro</a>
+          <a class="link-tag" href="#">  MaxiPhone 13 </a>
+          <a class="link-tag" href="#">  MiniFlipkart </a>
+          <a class="link-tag" href="#">  QuickBooks</a>
+          <a class="link-tag" href="#">  Flipkart Help </a>
+           <a class="link-tag" href="#"> CentreFlipkart </a>
+           <a class="link-tag" href="#"> Track Orders</a>
+           <a class="link-tag" href="#"> Flipkart </a>
+           <a class="link-tag" href="#"> Manage </a>
+           <a class="link-tag" href="#"> OrdersFlipkart </a>
+           <a class="link-tag" href="#"> Return Orders</a>
+           <a class="link-tag" href="#"> Flipkart Gift </a>
+           <a class="link-tag" href="#"> Cards </a>
+           <a class="link-tag" href="#"> StoreFlipkart </a>
+           <a class="link-tag" href="#"> Axis Bank Credit </a>
+           <a class="link-tag" href="#"> CardFlipkart </a>
+       </div> 
+
+       <div class="mt-2">
+        <span class="footer-tag-line-title" >Flipkart: The One-stop Shopping Destination</span>
+        <p class="tag-line"> E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from one store to another in search of the latest phone when you can find it on the Internet in a single click? Not only mobiles. Flipkart houses everything you can possibly imagine, from trending electronics like laptops, tablets, smartphones, and mobile accessories to in-vogue fashion staples like shoes, clothing and lifestyle accessories; from modern furniture like sofa sets, dining tables, and wardrobes to appliances that make your life easy like washing machines, TVs, ACs, mixer grinder juicers and other time-saving kitchen and small appliances; from home furnishings like cushion covers, mattresses and bedsheets to toys and musical instruments, we got them all covered. You name it, and you can stay assured about finding them all here. For those of you with erratic working hours, Flipkart is your best bet. Shop in your PJs, at night or in the wee hours of the morning. This e-commerce never shuts down. What's more, with our year-round shopping festivals and events, our prices are irresistible. We're sure you'll find yourself picking up more than what you had in mind. If you are wondering why you should shop from Flipkart when there are multiple options available to you, well, the below will answer your question.</p>
+          <span class="footer-tag-line-title" >Flipkart Plus</span>
+            <p class="tag-line">
+            A world of limitless possibilities awaits you - Flipkart Plus was kickstarted as a loyalty reward programme for all its regular customers at zero subscription fee. All you need is 500 supercoins to be a part of this service. For every 100 rupees spent on Flipkart order, Plus members earns 4 supercoins & non-plus members earn 2 supercoins. Free delivery, early access during sales and shopping festivals, exchange offers and priority customer service are the top benefits to a Flipkart Plus member. In short, earn more when you shop more!
+            </p> 
+            <p class="footer-list">What's more, you can even use the Flipkart supercoins for a number of exciting services, like:</p>
+            <p class="footer-list">An annual Zomato Gold membership</p>
+            <p class="footer-list">An annual Hotstar Premium membership</p>
+            <p class="footer-list">6 months Gaana plus subscription</p>
+            <p class="footer-list">Rupees 550 instant discount on flights on ixigo</p>
+            <p class="footer-list">Check out https://www.flipkart.com/plus/all-offers for the entire list. Terms and conditions apply.</p>
+            <br>
+          <span class="footer-tag-line-title" >Flipkart Plus</span> 
+          <p class="footer-list">
+            A world of limitless possibilities awaits you - Flipkart Plus was kickstarted as a loyalty reward programme for all its regular customers at zero subscription fee. All you need is 500 supercoins to be a part of this service. For every 100 rupees spent on Flipkart order, Plus members earns 4 supercoins & non-plus members earn 2 supercoins. Free delivery, early access during sales and shopping festivals, exchange offers and priority customer service are the top benefits to a Flipkart Plus member. In short, earn more when you shop more!</p>
+          </p> 
+          <span class="footer-tag-line-title" > EMI on Debit Cards</span>
+          <p class="footer-list">Did you know debit card holders account for 79.38 crore in the country, while there are only 3.14 crore credit card holders? After enabling EMI on Credit Cards, in another attempt to make online shopping accessible to everyone, Flipkart introduces EMI on Debit Cards, empowering you to shop confidently with us without having to worry about pauses in monthly cash flow. At present, we have partnered with Axis Bank, HDFC Bank, State Bank of India and ICICI Bank for this facility. More power to all our shoppers! Terms and conditions apply.</p>
+          <br>
+          <span class="footer-tag-line-title" >Mobile Exchange Offers</span>
+          <p class="footer-list">Get an instant discount on the phone that you have been eyeing on. Exchange your old mobile for a new one after the Flipkart experts calculate the value of your old phone, provided it is in a working condition without damage to the screen. If a phone is applicable for an exchange offer, you will see the 'Buy with Exchange' option on the product description of the phone. So, be smart, always opt for an exchange wherever possible. Terms and conditions apply.</p>
+          <br>
+          <span class="footer-tag-line-title" >What Can You Buy From Flipkart?</span> 
+          <span class="footer-tag-line-title"> Mobile Phones</span> 
+
+          <p class="footer-list">From budget phones to state-of-the-art smartphones, we have a mobile for everybody out there. Whether you're looking for larger, fuller screens, power-packed batteries, blazing-fast processors, beautification apps, high-tech selfie cameras or just large internal space, we take care of all the essentials. Shop from top brands in the country like Samsung, Apple, Oppo, Xiaomi, Realme, Vivo, and Honor to name a few. Rest assured, you're buying from only the most reliable names in the market. What's more, with Flipkart's Complete Mobile Protection Plan, you will never again find the need to run around service centres. This plan entails you to a number of post-purchase solutions, starting at as low as Rupees 99 only! Broken screens, liquid damage to phone, hardware and software glitches, and replacements - the Flipkart Complete Mobile Protection covers a comprehensive range of post-purchase problems, with door-to-door services.</p>
+          <br>
+          <span class="footer-tag-line-title" >Electronic Devices and Accessories</span>
+          <p class="footer-list">When it comes to laptops, we are not far behind. Filter among dozens of super-fast operating systems, hard disk capacity, RAM, lifestyle, screen size and many other criterias for personalized results in a flash. All you students out there, confused about what laptop to get? Our Back To College Store segregates laptops purpose wise (gaming, browsing and research, project work, entertainment, design, multitasking) with recommendations from top brands and industry experts, facilitating a shopping experience that is quicker and simpler.</p>
+          <p class="footer-list">Photography lovers, you couldn't land at a better page than ours. Cutting-edge DSLR cameras, ever reliable point-and-shoot cameras, millennial favourite instant cameras or action cameras for adventure junkies: our range of cameras is as much for beginners as it is for professionals. Canon, Nikon, GoPro, Sony, and Fujifilm are some big names you'll find in our store. Photography lovers, you couldn't land at a better page than ours. Cutting-edge DSLR cameras, ever reliable point-and-shoot cameras, millennial favourite instant cameras or action cameras for adventure junkies: our range of cameras is as much for beginners as it is for professionals. Canon, Nikon, GoPro, Sony, and Fujifilm are some big names you'll find in our store.
+            Turn your home into a theatre with a stunning surround sound system. Choose from our elaborate range of Sony home theatres, JBL soundbars and Philips tower speakers for an experience to remember.
+            How about jazzing up your phone with our quirky designer cases and covers? Our wide-ranging mobile accessories starting from headphones, power banks, memory cards, mobile chargers, to selfie sticks can prove to be ideal travel companions for you and your phone; never again worry about running out of charge or memory on your next vacation.</p>
+            <br>
+            <span class="footer-tag-line-title" >Large Appliances</span>
+            <p class="footer-list">Sleek TVs, power-saving refrigerators, rapid-cooling ACs, resourceful washing machines - discover everything you need to run a house under one roof. Our Dependable TV and Appliance Store ensures zero transit damage, with a replacement guarantee if anything goes wrong; delivery and installation as per your convenience and a double warranty (Official Brand Warranty along with an extended Flipkart Warranty) - rest assured, value for money is what is promised and delivered. Shop from market leaders in the country like Samsung, LG, Whirlpool, Midea, Mi, Vu, Panasonic, Godrej, Sony, Daikin, and Hitachi among many others.</p>
+            <br>
+           <span class="footer-tag-line-title" >Small Home Appliances</span>
+            <p class="footer-list">Find handy and practical home appliances designed to make your life simpler: electric kettles, OTGs, microwave ovens, sandwich makers, hand blenders, coffee makers, and many more other time-saving appliances that are truly crafted for a quicker lifestyle. Live life king size with these appliances at home.</p>
+            <br>
+            <span class="footer-tag-line-title" >Lifestyle</span>
+             <p class="footer-list">Flipkart, 'India ka Fashion Capital', is your one-stop fashion destination for anything and everything you need to look good. Our exhaustive range of Western and Indian wear, summer and winter clothing, formal and casual footwear, bridal and artificial jewellery, long-lasting make-up, grooming tools and accessories are sure to sweep you off your feet. Shop from crowd favourites like Vero Moda, Forever 21, Only, Arrow, Woodland, Nike, Puma, Revlon, Mac, and Sephora among dozens of other top-of-the-ladder names. From summer staple maxi dresses, no-nonsense cigarette pants, traditional Bandhani kurtis to street-smart biker jackets, you can rely on us for a wardrobe that is up to date. Explore our in-house brands like Metronaut, Anmi, and Denizen, to name a few, for carefully curated designs that are the talk of the town. Get ready to be spoiled for choice.Festivals, office get-togethers, weddings, brunches, or nightwear - Flipkart will have your back each time.</p>
+             <br><span class="footer-tag-line-title" >Home and Furniture</span>
+            <p class="footer-list">Moving to a new place is never easy, especially if you're buying new furniture. Beds, sofa sets, dining tables, wardrobes, and TV units - it's not easy to set up everything again. With the hundreds of options thrown at you, the ride could be overwhelming. What place is reliable, what furniture will stand the test of time? These are questions you must ask before you choose a store. Well, our Durability Certified Furniture Store has not only curated a range of furniture keeping in mind the modern Indian consumer but furniture that comes with a lab certification, ensuring they last you for up to 10 years. Yes, all our furniture has gone through 35 stability and load tests so that you receive only the best-quality furniture. Be FurniSure, always. Names to look out for are Nilkamal, Godrej Interio, Urban Ladder, HomeTown, Durian and Perfect Homes.</p>
+             <p class="footer-list">You may have your furniture all set up, but they could end up looking flat and incomplete without complementary decor. Curtains, cushion covers, bed sheets, wall shelves, paintings, floor lamps - find everything that turns a house to an inviting home under one roof at Flipkart.</p>
+             <br> <span class="footer-tag-line-title" >Baby and Kids</span>
+             <p class="footer-list">Your kids deserve only the best. From bodysuits, booties, diapers to strollers, if you're an expecting mother or a new mother, you will find everything you need to set sail on a smooth parenting journey with the help of our baby care collection. When it comes to safety, hygiene and comfort, you can rely on us without a second thought. Huggies, Pampers, MamyPoko, and Johnson & Johnson: we host only the most-trusted names in the business for your baby.</p>
+          
+             <br> <span class="footer-tag-line-title" >Books, Sports and Games</span>
+             <p class="footer-list">Work hard and no play? We don't believe in that. Get access to best-selling fiction and non-fiction books by your favourite authors, thrilling English and Indian blockbusters, most-wanted gaming consoles, and a tempting range of fitness and sports gadgets and equipment bound to inspire you to get moving.</p>
+             <br>
+             <span class="footer-tag-line-title" >Grocery/Supermart</span>
+             <p class="footer-list">Launching into the grocery vertical, Flipkart introduces Supermart that is out to bring everyday essentials close to you. From pulses, spices, dairy, personal and sanitary care, breakfast essentials, health drinks, spreads, ready to cook, grooming to cleaning agents, we are happy to present everything you need to run a house. Now buy Grocery products for as low as 1 Rupee only - our 1 Rupee Store presents new products every day for a nominal price of 1 Rupee only. Terms and conditions apply.</p>
+        
+      </div>
+      </div>
+      <style>
+        .my-footer-container{
+          margin-left: 3%;
+          margin-right: 3%;
+          padding-top: 3%;
+        }
+
+       .last-footer-list{
+          font-size: small;
+        }
+      </style>
+
+      <div class="container-fluid s" style="background-color: #172337;"> <div>
+          <div class="my-footer-container">
+            <div class="row ">
+              <div class="col-md-8 col-sm-12 " style="margin-top: 2%;">
+                <div class="row"> 
+                  <div class="col-md-3 col-sm-12">
+                  <h6 class="last-footer-title">ABOUT</h6>
+                    <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Contact Us</a></li>
+                    <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">About Us</a></li>
+                    <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Careers</a></li>
+                    <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Flipkart Stories</a></li>
+                    <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Press</a></li>
+                    <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Flipkart Wholesale</a></li>
+                    <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Corporate Information</a></li>
+                    <br>
+                    </div>
+                        <div class="col-md-3 col-sm-12">
+                          <h6 class="last-footer-title">HELP</h6>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Payments</a></li>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Shipping</a></li>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Cancellation & Returns</a></li>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">FAQ</a></li>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Report Infringement</a></li>
+                          <br>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                          <h6 class="last-footer-title">POLICY</h6>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Return Policy</a></li>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Terms Of Use</a></li>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Security</a></li>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Privacy</a></li>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Sitemap</a></li>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">EPR Compliance</a></li>
+                          <br>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                          <h6 class="last-footer-title"> SOCIAL</h6>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/"  class="last-footer-list">Facebook</a></li>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Twitter</a></li>
+                          <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">YouTube</a></li>
+                          <br>
+                        </div>
+              </div>
+              </div>
+                      <div class="col-md-4 col-sm-12 pb-3" style="margin-top: 3%;" >
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12"  style="border-left: 1px solid grey;height: 138px;"><h6 class="last-footer-title"> Mail Us:</h6>
+                            <p class="last-footer-list">
+                              Flipkart Internet Private Limited,<br> 
+                              Buildings Alyssa, Begonia & <br>
+                              Clove Embassy Tech Village, <br>
+                              Outer Ring Road, Devarabeesanahalli Village,<br> 
+                              Bengaluru, 560103, <br>
+                              Karnataka, India</p>
+                              <br>
+                            </div>
+                            <div class="col-md-6 col-sm-12"><h6 class="last-footer-title">Registered Office Address:</h6>
+                            <p class="last-footer-list">
+                              Flipkart Internet Private Limited, <br>
+                              Buildings Alyssa, Begonia & <br>
+                              Clove Embassy Tech Village, <br>
+                              Outer Ring Road, Devarabeesanahalli Village, <br>
+                              Bengaluru, 560103, <br>
+                              Karnataka, India <br>
+                              CIN : U51109KA2012PTC066107 <br>
+                             Telephone:  <span style="color: #2874f0;">  1800 202 9898 </span>
+                            </p>
+                            <br>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+               </div>
+      </div>
+    </div>
+    <hr class="line" size="1" style="margin: 0px; color: grey;">
+      <div class="container-fluid s" style="background-color: #172337;padding-top: 1%; padding-bottom: 2%;">   <div>
+        <div class="footer-last-menu" style="margin-left: 8%; margin-right: 4%;">
+          <div class="footer-last-item"><img src="image/z.svg" alt=""> <a href="https://www.flipkart.com/" class="last-footer-list"><span class="tag-name mt-1" > Become a Seller</span> </a></div>
+          <div class="footer-last-item"><img src="image/x.svg" alt=""> <a href="https://www.flipkart.com/" class="last-footer-list"><span class="tag-name mt-1" > Advertise</span> </a></div>
+          <div class="footer-last-item"><img src="image/c.svg" alt=""> <a href="https://www.flipkart.com/" class="last-footer-list"><span class="tag-name mt-1" > Gift Cards</span> </a></div>
+          <div class="footer-last-item"><img src="image/v.svg" alt=""> <a href="https://www.flipkart.com/" class="last-footer-list"><span class="© 2007- Flipkart.com" > Help Center</span> </a></div>
+          <div class="footer-last-item"><span class="© 2007- Flipkart.com" style="font-size: smaller;color: white;">© 2007- Flipkart.com</span></div>
+          <div class="footer-last-item"><img  class="payment" src="image/payment.svg" alt=""></div>
+      </div>
+
+   
+    
+
+
+      
+      <!-- <div class="container-fluid s" style="background-color: #172337;">
+          <div class="my-footer-container footer ">
+          <div class="row ">
+            <div class="col-md-8 col-sm-12 " style="margin-top: 3%;">
+              <div class="row"> 
+                <div class="col-md-3 col-sm-12">
+                <h6 class="last-footer-title">ABOUT</h6>
+                  <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Contact Us</a></li>
+                  <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">About Us</a></li>
+                  <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Careers</a></li>
+                  <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Flipkart Stories</a></li>
+                  <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Press</a></li>
+                  <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Flipkart Wholesale</a></li>
+                  <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Corporate Information</a></li>
+                  <br>
+                  </div>
+                      <div class="col-md-3 col-sm-12">
+                        <h6 class="last-footer-title">HELP</h6>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Payments</a></li>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Shipping</a></li>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Cancellation & Returns</a></li>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">FAQ</a></li>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Report Infringement</a></li>
+                        <br>
+                      </div>
+                      <div class="col-md-3 col-sm-12">
+                        <h6 class="last-footer-title">POLICY</h6>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Return Policy</a></li>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Terms Of Use</a></li>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Security</a></li>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Privacy</a></li>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Sitemap</a></li>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">EPR Compliance</a></li>
+                        <br>
+                      </div>
+                      <div class="col-md-3 col-sm-12">
+                        <h6 class="last-footer-title"> SOCIAL</h6>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/"  class="last-footer-list">Facebook</a></li>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">Twitter</a></li>
+                        <li class="last-footer-list"> <a href="https://www.flipkart.com/" class="last-footer-list">YouTube</a></li>
+                        <br>
+                      </div>
+            </div>
+            </div>
+                    <div class="col-md-4 col-sm-12 pb-3" style="margin-top: 3%;" >
+                      <div class="row">
+                          <div class="col-md-6 col-sm-12" style="border-left: 1px solid grey;"><h6 class="last-footer-title"> Mail Us:</h6>
+                          <p class="last-footer-list">
+                            Flipkart Internet Private Limited,<br> 
+                            Buildings Alyssa, Begonia & <br>
+                            Clove Embassy Tech Village, <br>
+                            Outer Ring Road, Devarabeesanahalli Village,<br> 
+                            Bengaluru, 560103, <br>
+                            Karnataka, India</p>
+                            <br>
+                          </div>
+                          <div class="col-md-6 col-sm-12"><h6 class="last-footer-title">Registered Office Address:</h6>
+                          <p class="last-footer-list">
+                            Flipkart Internet Private Limited, <br>
+                            Buildings Alyssa, Begonia & <br>
+                            Clove Embassy Tech Village, <br>
+                            Outer Ring Road, Devarabeesanahalli Village, <br>
+                            Bengaluru, 560103, <br>
+                            Karnataka, India <br>
+                            CIN : U51109KA2012PTC066107 <br>
+                          </p>
+                          <br>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          <hr class="line">
+          <div class="mycontainer-2"> 
+          <div class="row pb-5">
+              <div class="col-md-2 col-sm-12 last-footer-list text-center"><img src="image/z.svg" alt=""> <a href="https://www.flipkart.com/" class="last-footer-list"><span class="tag-name mt-1" > Become a Seller</span> </a></div>
+              <div class="col-md-2 col-sm-12 last-footer-list text-center"><img src="image/x.svg" alt=""> <a href="https://www.flipkart.com/" class="last-footer-list"><span class="tag-name mt-1" > Advertise</span> </a></div>
+              <div class="col-md-2 col-sm-12 last-footer-list text-center"><img src="image/c.svg" alt=""> <a href="https://www.flipkart.com/" class="last-footer-list"><span class="tag-name mt-1" > Gift Cards</span> </a></div>
+              <div class="col-md-1 col-sm-12 last-footer-list text-center"><img src="image/v.svg" alt=""> <a href="https://www.flipkart.com/" class="last-footer-list"><span class="tag-name mt-1" > Help Center</span> </a></div>
+              <div class="col-md-2 col-sm-12 last-footer-list text-center">© 2007- Flipkart.com</div>
+              <div class="col-md-3 col-sm-12 last-footer-list text-center"><img  class="payment" src="image/payment.svg" alt=""></div>
+            </div>
+        </div>
+      </div>  -->
+      </body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/main.js"></script>
+</html>
