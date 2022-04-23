@@ -1,6 +1,11 @@
 body{
     background-color: #e5e5e5 !important;
   }
+
+  .submenu-link-list{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
   
   .main-manu{
     display: flex;
@@ -109,8 +114,8 @@ body{
     opacity: 1;
   }
   .mycontainer{
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
   }
 
   .flickity-page-dots{
@@ -127,7 +132,9 @@ body{
   }
 
   .top-offer-tag{
-    margin-top:25%;
+    /* margin-top:69%; */
+    padding-top: 79px;
+
   }
   .moblie-banne{
     display: none;      
@@ -666,6 +673,10 @@ font-size: medium;
 
 
   @media (min-width: 781px) and (max-width: 991.98px) { 
+
+    #top-tag-md{
+      display: none;
+    }
     .main-menu-item2{
       width: 50%;
     }
@@ -706,6 +717,11 @@ font-size: medium;
 
 
  @media screen and (min-device-width: 481px) and (max-device-width: 780px) { 
+
+  #top-tag-md{
+    display: none;
+  }
+
   .footer-last-menu{
     flex-direction: column;
   }

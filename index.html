@@ -136,12 +136,18 @@
   border: 1px gainsboro;
 }
 </style>
+
 <nav>
   <div class="container-fluid web-menu bg-primary menu-pc">
     <div class="main-menu-container pt-2 pb-2" id="main-container-main">
       <div class="main-menu-item1">  
         <div><img width="75px" height="20px"  src="image/logo.png" alt=""></div>
-        <div style="width: 75px; margin-top: -8px;"><span style="color: #FFF;"><i> <a href="#" style="font-size:x-small;" class="p-link text-white"> Explore</a></i></span><span style="color: yellow;"><i><a href="#" style="font-size: x-small;" class="p-link text-white" style="color: yellow;">Plus</a></i></span><sup><img width="7px" height="7px" src="image/plus_aef861.png" alt=""></sup></div></div>
+        <div style="width: 75px; margin-top: -8px;"><span style="color: #FFF;">
+            <i><a href="#" style="font-size:x-small;" class="p-link text-white">Explore</a></i>
+            <i><span href="#" style="font-size: x-small;color: yellow; " class="p-link" style="color: yellow;">Plus</span></i>
+              <img width="7px" height="7px" src="image/plus_aef861.png" alt="">
+            </div>
+          </div>
        <div class="main-menu-item2">
         <div class="input-group">
           <input type="text" class="form-control" style=" border: 1px solid #ffffff;" placeholder="Search for products, brands and more" aria-label="Search for products, brands and more" aria-describedby="basic-addon2">
@@ -168,8 +174,20 @@
             <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/49.png" alt=""> <span class="tag_name"> Gift cards </span></a> 
           </div>
         </div>
-        <div class="menu-tag-name"><a  href="https://seller.flipkart.com/" class="main-menu-tag"><span>Become a Seller</span></a></div>
+            <div class="menu-tag-name"><a  href="https://seller.flipkart.com/" class="main-menu-tag"><span>Become a Seller</span></a></div>
+        <div class="dropdown">
         <div class="menu-tag-name"><a  href="https://seller.flipkart.com/" class="main-menu-tag"><span>More</span></a></div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          
+          
+      
+          <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/54.png" alt=""> <span class="tag_name"> Notification Preferences </span></a>
+          <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/50.png" alt=""> <span class="tag_name"> 24x7 Customer Care</span></a>
+          <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/43.png" alt=""> <span class="tag_name"> Advertise </span></a>
+          <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/51.png" alt=""> <span class="tag_name"> Download App </span></a>
+ 
+        </div>
+    </div>
         <div class="menu-tag-name"><a  href="https://seller.flipkart.com/" class="main-menu-tag"><svg class="V3C5bO" width="14" height="14" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="_1bS9ic" d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#fff"></path></svg><span style="padding-left:10px;">Cart</span></a></div>
       </div>
     </div>
@@ -383,8 +401,6 @@
 <div class="mobile-bg-color" style="display: none;"></div>
 </div>
 
-
-
   <!-- <div class="container-fluid" class="top-tag-bag"  id="top_tag_md_icon" style="background-color: white !important;">
     <div class="container pt-2 pb-2">
         <nav id="menu">
@@ -532,7 +548,8 @@
      
     }
     .submenu-link-list{
-      width: 300px;
+      /* width: 300px; */
+      width: max-content;
     }
 
  </style>
@@ -554,7 +571,7 @@
                 <ul class="dropdown-menu">
 
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="flipkart.com">  Men's Top Wear &raquo; </a>
+                  <a class="dropdown-item" href="flipkart.com">  Men's Top Wear <span class="	greater_than_sign"> &#62; </span></a>
                   <div class="megasubmenu dropdown-menu">
                     <ol class="submenu-link-list">
                         <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item title-link" href="#">MORE IN MEN'S TOP WEAR</a></li>
@@ -574,7 +591,7 @@
                 </li>
               
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="flipkart.com"> Men's Bottom Wear  &raquo; </a>
+                  <a class="dropdown-item" href="flipkart.com"> Men's Bottom Wear  <span class="	greater_than_sign"> &#62; </span></a>
                   <div class="megasubmenu dropdown-menu">
                     <ol class="submenu-link-list">
                     <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN'S BOTTOM WEAR</a></li>
@@ -592,7 +609,7 @@
                 </li> 
               
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="flipkart.com">Women Ethnic  &raquo; </a>
+                  <a class="dropdown-item" href="flipkart.com">Women Ethnic <span class="	greater_than_sign"> &#62; </span></a>
                   <div class="megasubmenu dropdown-menu">
                     <ol class="submenu-link-list">
                     <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN ETHNIC</a></li>
@@ -613,7 +630,7 @@
                 </li>
                
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="flipkart.com"> Women Western &raquo; </a>
+                  <a class="dropdown-item" href="flipkart.com"> Women Western <span class="	greater_than_sign"> &#62; </span></a>
                   <div class="megasubmenu dropdown-menu">
                     <ol class="submenu-link-list">
                         <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN WESTERN</a></li>
@@ -633,7 +650,7 @@
                   </div>
                 </li>   
                  <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="flipkart.com"> Men Footwear &raquo; </a>
+                  <a class="dropdown-item" href="flipkart.com"> Men Footwear <span class="	greater_than_sign"> &#62; </span></a>
                   <div class="megasubmenu dropdown-menu">
                     <ol class="submenu-link-list">
                     <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN FOOTWEAR</a></li>
@@ -651,7 +668,7 @@
                   </div>
                 </li>  
                   <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="flipkart.com">Women Footwear  &raquo; </a>
+                  <a class="dropdown-item" href="flipkart.com">Women Footwear  <span class="	greater_than_sign"> &#62; </span></a>
                   <div class="megasubmenu dropdown-menu">
                     <ol class="submenu-link-list">
                     <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN FOOTWEAR</a></li>
@@ -672,7 +689,7 @@
                 </li>
   
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="flipkart.com"> Watches and Accessories &raquo; </a>
+                  <a class="dropdown-item" href="flipkart.com"> Watches and Accessories <span class="	greater_than_sign"> &#62; </span></a>
                   <div class="megasubmenu dropdown-menu">
                     <ol class="submenu-link-list">
                         <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN BAGS, SUITCASES & LUGGAGE</a></li>
@@ -690,7 +707,7 @@
                         </div>
                 </li>
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="flipkart.com"> Bags, Suitcases & Luggage &raquo; </a>
+                  <a class="dropdown-item" href="flipkart.com"> Bags, Suitcases & Luggage <span class="	greater_than_sign"> &#62; </span></a>
                   <div class="megasubmenu dropdown-menu">
                     <ol class="submenu-link-list">
                     <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN KIDS</a></li>
@@ -711,7 +728,7 @@
                 </li>
        
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="flipkart.com">Essentials &raquo; </a>
+                  <a class="dropdown-item" href="flipkart.com">Essentials <span class="greater_than_sign"> &#62; </span></a>
                   <div class="megasubmenu dropdown-menu">
                     <ol class="submenu-link-list">
                     <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN ESSENTIALS</a></li>
@@ -732,7 +749,7 @@
                     </div>
                 </li>
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="flipkart.com">  Winter &raquo; </a>
+                  <a class="dropdown-item" href="flipkart.com">  Winter <span class="greater_than_sign"> &#62; </span></a>
                   <div class="megasubmenu dropdown-menu">
                     <ol class="submenu-link-list">
                   <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WINTER</a></li>
@@ -1360,7 +1377,7 @@
  <div class="mycontainer mt-2 mb-2" style="background-color: white; ">
   <div class="row">
     <div class="col-md-2 col-sm-12" style="text-align: center;" >
-      <h3 class="top-offer-tag mt-2" >Top Deals on Fashion</h3><p style="text-align: center;"> </p>
+      <h3 class="top-offer-tag mt-2" style="padding-top: 76px;" >Top Deals on Fashion</h3><p style="text-align: center;"> </p>
       <div style="text-align: center;"><button type="button" class="btn btn-primary">VIEW ALL</button></div>
       <div class="mt-4" style=" height: 100%; overflow: hidden;"><img  class="side-banner" style="width: 100%;" src="image/parpal.jpg" alt=""></div>
     </div>
@@ -1368,17 +1385,16 @@
       <div class="main-slide row mt-4" style="text-align:center">
         <div class="carousel-wrap">
           <div class="owl-carousel owl-theme">
-  
          <div class="item">
             <div class="card" style="width: 100%; align-items: center;">
               <div class="img-inner">
                 <a href="https://www.flipkart.com/" class="p-link"> <img src="image/first/1.jpeg" style="width: fit-content;" class="product-img card-img-top" alt="..."></a>
               </div>
               <div class="card-body">
-               <a href="https://www.flipkart.com/" class="p-link"> <span class="product-title">Role Play Toys</span><br></a>
-               <a href="https://www.flipkart.com/" class="p-link"> <span class="product-price">Under ₹ 699</span><br></a>
-               <a href="https://www.flipkart.com/" class="p-link"> <span class="product-more">Explore More</span><br></a>
-              </div>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-title">Role Play Toys</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-price">Under ₹ 699</span><br></a>
+                <a href="https://www.flipkart.com/" class="p-link"><span class="product-more">Explore More</span><br></a>
+              </div>>
             </div>
           </div>
 
@@ -2018,7 +2034,7 @@
 <div class="mycontainer mt-2 mb-2" style="background-color: white; ">
   <div class="row">
     <div class="col-md-2 col-sm-12" style="text-align: center;" >
-      <h3 style="margin-top:25%;">Best selling Furniture</h3>
+      <h3 style="margin-top:57%;">Best selling Furniture</h3>
       <div style="text-align: center;"><button type="button" class="btn btn-primary">VIEW ALL</button></div>
       <div class="mt-4" style=" height: 100%; overflow: hidden;"><img class="side-banner" style="width: 100%;" src="image/parpal.jpg" alt=""></div>
     </div>
@@ -2349,7 +2365,7 @@
     </div>
     </div>
 
-        <div class="my-footer-container  mb-2 pt-1 pb-1">
+        <div class="my-footer-container mb-2 pt-1 pb-1" style="margin-left: 5%; margin-right:  5%;">  
           <div class="row"> 
             <div  class="col-md-3 col-sm-12 pt-3"> <a href="https://www.flipkart.com/" class="p-link"><img src="image/d4.jpg" class="mysub-banner" alt=""></a></div>
             <div  class="col-md-3 col-sm-12 pt-3"> <a href="https://www.flipkart.com/" class="p-link"><img src="image/d3.jpg" class="mysub-banner" alt=""></a></div>
@@ -2524,14 +2540,13 @@
              <br>
              <span class="footer-tag-line-title" >Grocery/Supermart</span>
              <p class="footer-list">Launching into the grocery vertical, Flipkart introduces Supermart that is out to bring everyday essentials close to you. From pulses, spices, dairy, personal and sanitary care, breakfast essentials, health drinks, spreads, ready to cook, grooming to cleaning agents, we are happy to present everything you need to run a house. Now buy Grocery products for as low as 1 Rupee only - our 1 Rupee Store presents new products every day for a nominal price of 1 Rupee only. Terms and conditions apply.</p>
-        
       </div>
       </div>
       <style>
         .my-footer-container{
           margin-left: 3%;
           margin-right: 3%;
-          padding-top: 3%;
+          padding-top: 1%;
         }
 
        .last-footer-list{
@@ -2582,8 +2597,8 @@
                           <br>
                         </div>
               </div>
-              </div>
-                      <div class="col-md-4 col-sm-12 pb-3" style="margin-top: 3%;" >
+              </div>  
+                      <div class="col-md-4 col-sm-12 pb-3" style="margin-top: 2%;" >
                         <div class="row">
                             <div class="col-md-6 col-sm-12"  style="border-left: 1px solid grey;height: 138px;"><h6 class="last-footer-title"> Mail Us:</h6>
                             <p class="last-footer-list">
@@ -2604,7 +2619,7 @@
                               Bengaluru, 560103, <br>
                               Karnataka, India <br>
                               CIN : U51109KA2012PTC066107 <br>
-                             Telephone:  <span style="color: #2874f0;">  1800 202 9898 </span>
+                             Telephone:  <span href="tel:18002029898" style="color: #2874f0;">  1800 202 9898 </span>
                             </p>
                             <br>
                           </div>
