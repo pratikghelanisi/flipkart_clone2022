@@ -20,6 +20,9 @@ body{
     cursor: pointer;
   }
 
+  .top-tag-md{
+    display: none;
+  }
   .top-tag-bag{
     box-shadow: 20px 20px 50px black; 
   }
@@ -298,11 +301,11 @@ body{
     
       .owl-carousel .prev-slide{
       
-          left: -33px;
+          left: -44px;
       }
       .owl-carousel .next-slide{
     
-          right: -33px;
+          right: -44px;
       }
       .owl-carousel .prev-slide:hover{
          background-position: 0px -53px;

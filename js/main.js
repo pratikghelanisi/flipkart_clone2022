@@ -1,4 +1,16 @@
 $(document).ready(function(){
+
+    $('#btmyCarousel').bind('mousewheel', function(e) {
+        if(e.originalEvent.wheelDelta /120 > 0) {
+            $(this).carousel('next');
+        } else {
+            $(this).carousel('prev');
+        }
+    });
+
+
+
+    
     $('.owl-carousel').owlCarousel({
         margin: 12,
         nav: true,
@@ -25,6 +37,16 @@ $(document).ready(function(){
         }
         });
 
+    $('#owl-carousel').owlCarousel({
+        margin: 0,
+        nav: true,
+        loop:true,
+        navigation: true,
+        dots: false,
+        navText:["<div class='nav-btn prev-slide prev-btn'><svg width='14.6' height='27' viewBox='0 0 16 27' xmlns='http://www.w3.org/2000/svg' class='FXox6K'><path d='M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z' fill='#000' class='FXox6K'></path></svg></div>","<div class='next-btn nav-btn next-slide'><svg width='14.6' style='transform: rotate(180deg);' height='27' viewBox='0 0 16 27' xmlns='http://www.w3.org/2000/svg' class='_2-wzdc'><path d='M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z' fill='#000' class='FXox6K'></path></svg></div>"],
+        items: 1
+        });
+
     
      $('.owl-carousel-single').owlCarousel({
       margin:0,
@@ -35,26 +57,39 @@ $(document).ready(function(){
   });
 
 
-  $(' #client .owl-carousel').owlCarousel({
+  $(' #client_demo .owl-carousel').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
-    responsive:{
-        0:{
-            items:6
-        },
-        600:{
-            items:8
-        },
-        1000:{
-            items:10
-        },
+    items:1
 
-        1200: {
-          items: 12
-        }
-    }
 })
+
+
+// $('#demodemo .owl-carousel').owlCarousel({
+//     margin: 0,
+//         nav: true,
+//         loop:true,
+//         navigation: true,
+//         dots: false,
+//         navText:["<div class='nav-btn prev-slide prev-btn'><svg width='14.6' height='27' viewBox='0 0 16 27' xmlns='http://www.w3.org/2000/svg' class='FXox6K'><path d='M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z' fill='#000' class='FXox6K'></path></svg></div>","<div class='next-btn nav-btn next-slide'><svg width='14.6' style='transform: rotate(180deg);' height='27' viewBox='0 0 16 27' xmlns='http://www.w3.org/2000/svg' class='_2-wzdc'><path d='M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z' fill='#000' class='FXox6K'></path></svg></div>"],
+//         items: 1
+// })
+
+
+$(' #demodemo .owl-carousel').owlCarousel({
+    margin: 0,
+    nav: true,
+    loop:true,
+    navigation: true,
+    dots: false,
+    navText:["<div class='nav-btn prev-slide prev-btn'><svg width='14.6' height='27' viewBox='0 0 16 27' xmlns='http://www.w3.org/2000/svg' class='FXox6K'><path d='M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z' fill='#000' class='FXox6K'></path></svg></div>","<div class='next-btn nav-btn next-slide'><svg width='14.6' style='transform: rotate(180deg);' height='27' viewBox='0 0 16 27' xmlns='http://www.w3.org/2000/svg' class='_2-wzdc'><path d='M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z' fill='#000' class='FXox6K'></path></svg></div>"],
+    items: 1
+   
+})
+
+
+
 
 
 $(' #offer .owl-carousel').owlCarousel({
@@ -178,3 +213,6 @@ $(".mobile-menu--btn").click(function(){
 		}
 
 	}); 
+
+
+    

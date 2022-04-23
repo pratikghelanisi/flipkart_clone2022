@@ -132,10 +132,110 @@
   background-color: rgb(240, 240, 240);
 }
 
+.dropdown-item:hover .greater_than_sign{
+  /* display:contents; */
+  display: none;
+}
+
+.greater_than_sign{
+  display: none;
+}
+
 .dropdown-item{
   border: 1px gainsboro;
 }
+
+.dropdown-menu{
+  padding: 0px;
+}
+
+
 </style>
+
+
+<style>
+  .login{
+    background-color: #FFF;
+  }
+  .email,.password{
+    padding: 8px 10px 10px 0;
+
+    color: #000;
+    font-size: inherit;
+    background: #fff;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .email:focus-visible{
+    border: none;
+  }
+
+  .login-btn{
+    border: none;
+    line-height: 180%;
+    text-align: center;
+    color: #2874f0;
+    background-color: #fff;
+    /* margin-top: 16px; */
+    width: 100%;
+    height: 48px;
+    font-size: 15px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  }
+
+  .item-2-login{
+    width: 90%;
+  }
+
+  .otp{
+    border: none;
+    line-height: 180%;
+    text-align: center;
+    color: #2874f0;
+    background-color: #fff;
+    margin-top: 16px;
+    width: 100%;
+    height: 48px;
+    font-size: 15px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  }
+</style>
+<!-- 
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button> -->
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="margin-left: 32%;">
+    <div class="modal-content" style="width: 150%;">
+      <div class="login">
+        <div class="row">
+          <div class="col-4" style="padding-top: 5%; padding-left: 3%; background-color: #2874f0; ">
+                <div class="login_item1" >
+                  <h2 style="color: #FFF;">Login</h2>
+                  <p style="color: #FFF;">Get access to your Orders, Wishlist and Recommendations</p>
+                </div>
+                <div class="login_item2" style="margin-top: 96%;">
+                  <img src="image/loginicon.png" alt="">
+                </div>
+            
+          </div>
+          <div class="col-8 pb-5 pt-5 d-flex flex-column bd-highlight mb-3" style="padding-top: 5%; padding-left: 3%;"> 
+            <div class="item-2-login"> <input placeholder="Enter the Email ID" type="text" class="email"> </div>
+            <div class="item-2-login mt-4"> <input placeholder="Enter the Passwords " type="text" class="password"> </div>
+            <div class="item-2-login mt-4"> <p style="font-size: smaller;">By continuing, you agree to Flipkart's <a href="" style="text-decoration: none;"> Terms of Use </a> and <a href="" style="text-decoration: none;"> Privacy Policy</a>.</p></div>
+            <div class="item-2-login"><button style="background-color: #fb641b;color: #ffffff;" class="otp">Login</button></div>
+            <div class="item-2-login mt-4" style="text-align: center;color: gray;"><h5>OR</h5></div>
+            <div class="item-2-login"><button style="background-color: #ffffff;color: #2874f0;" class="otp">Request OTP</button></div>
+      
+            <div class="item-2-login mt-5" style="text-align: center;"> <a href="" style="text-decoration: none;">New to Flipkart? Create an account</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <nav>
   <div class="container-fluid web-menu bg-primary menu-pc">
@@ -158,12 +258,12 @@
           </div>
         </div>
         <!-- <input style=" border: 0px; padding:5px 5px 5px 10px;"  type="text" class="search-bar" placeholder="Search for Products, Brands and more" aria-label="Search for Products, Brands and more" aria-describedby="basic-addon2"> -->
-
         <!-- <svg width="20" height="20" viewBox="0 0 17 18" class="src-btn" xmlns="http://www.w3.org/2000/svg"><g fill="#2874F1" fill-rule="evenodd"><path class="_34RNph" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="_34RNph" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg> -->
       </div>
       <div class="main-menu-item3 main-menu-btn-bar" >
         <div class="dropdown">
-          <a class="login-btn menu-tag-name " class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Login</a>
+          <!-- <a class="login-btn menu-tag-name " class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Login</a> -->
+          <a class="login-btn menu-tag-name " class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="modal"  data-bs-target="#exampleModal" data-bs-whatever="@mdo" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Login</a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/54.png" alt=""> <span class="tag_name"> Login </span></a>
             <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/50.png" alt=""> <span class="tag_name"> New user </span></a>
@@ -179,15 +279,12 @@
         <div class="menu-tag-name"><a  href="https://seller.flipkart.com/" class="main-menu-tag"><span>More</span></a></div>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           
-          
-      
           <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/54.png" alt=""> <span class="tag_name"> Notification Preferences </span></a>
           <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/50.png" alt=""> <span class="tag_name"> 24x7 Customer Care</span></a>
           <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/43.png" alt=""> <span class="tag_name"> Advertise </span></a>
           <a href="https://seller.flipkart.com/" class="dropdown-item" href="#"><img style="width: 9%;" src="image/51.png" alt=""> <span class="tag_name"> Download App </span></a>
- 
         </div>
-    </div>
+      </div>
         <div class="menu-tag-name"><a  href="https://seller.flipkart.com/" class="main-menu-tag"><svg class="V3C5bO" width="14" height="14" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="_1bS9ic" d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#fff"></path></svg><span style="padding-left:10px;">Cart</span></a></div>
       </div>
     </div>
@@ -269,7 +366,7 @@
     background-color: #fff;
     cursor: pointer;
     height: 32px;
-    padding: 5px 40px;
+    padding: 2px 40px;
     border: 1px solid #dbdbdb;
 }
   
@@ -347,7 +444,7 @@
           <svg width="16" height="16" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><g fill="#fff" fill-rule="evenodd"><path d="m5.189 13.04c0 .996-.791 1.804-1.767 1.804-.976 0-1.767-.808-1.767-1.804 0-.996.791-1.804 1.767-1.804.976 0 1.767.808 1.767 1.804"></path><path d="m14.912 2.259h-14.298l2.247 6.917c.042.129.16.216.293.216h8.06c-.064.69-.629 1.841-1.702 1.841h-6.04l1.072 1.991h5.611c1.881 0 2.938-2.278 3.657-4.719.888-3.01 1.219-6.245 1.106-6.245"></path><path d="m.615 2.259l-.592-1.828c-.08-.207.069-.431.287-.431h1.482c.126 0 .24.079.287.198l.682 2.061c0 0-.63 1.642-1.942.066"></path><path d="m2.262.756c0 0 .498 1.503 2.234 1.503l-1.736.749-1.104-.749.607-1.503"></path><path d="m13.424 13.325c0 .837-.664 1.516-1.484 1.516-.82 0-1.484-.679-1.484-1.516 0-.837.664-1.516 1.484-1.516.82 0 1.484.679 1.484 1.516"></path></g></svg>
         </a>
       </div>
-    <div class="col-2" style="text-align: end; text-decoration: none;">
+    <div class="col-2" style="text-align: start; text-decoration: none;">
       <a  href="#"clasz style="color: #FFF;text-decoration: none;"> Login</a>
     </div>
   </div>
@@ -545,7 +642,6 @@
     .dropdown-item-link{
       list-style: none !important;
       text-decoration: none !important;
-     
     }
     .submenu-link-list{
       /* width: 300px; */
@@ -568,10 +664,242 @@
                 <div class="menu-tag" >
                   Top Offers
                 </div></a>
-                <ul class="dropdown-menu">
+             
+        </li>
+            </ul>   
+          </div>
 
+          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+            <ul>
+                      
+            <li class="dropdown">
+              <a class=" dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                <img class="sebmenuimg" src="image/icon/2.webp" alt="">
+                <div class="menu-tag" >
+                  Grocery
+                </div> </a>
+                <ul class="dropdown-menu">
+                  <li class="has-megasubmenu">
+                      <a class="dropdown-item" href="flipkart.com">  Men's Top Wear   <span style="align-items: flex-end;" class="greater_than_sign"> &#62; </span> </a>
+                      
+                    <div class="megasubmenu dropdown-menu">
+                      <ol class="submenu-link-list">
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item title-link" href="#">MORE IN MEN'S TOP WEAR</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's T-Shirts</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Casual Shirts</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Formal Shirts</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Kurtas</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Sets</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Blazers</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item- link dropdown-item" href="#">Men's Raincoat</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Windcheaters</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Suit</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Fabrics</a></li>
+                        </ol>
+                    </div>
+                  </li>
+                
+                  <li class="has-megasubmenu">
+                    <a class="dropdown-item" href="flipkart.com"> Men's Bottom Wear  <span class="greater_than_sign"> &#62; </span></a>
+                    <div class="megasubmenu dropdown-menu">
+                      <ol class="submenu-link-list">
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN'S BOTTOM WEAR</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Jeans</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Trousers</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Trackpants</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Shorts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Cargos</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Threefourths</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Pyjamas & Loungepants</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Dhoti</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Pyjama</a></li>
+                      </ol>
+                    </div>
+                  </li> 
+                
+                  <li class="has-megasubmenu">
+                    <a class="dropdown-item" href="flipkart.com">Women Ethnic <span class="	greater_than_sign"> &#62; </span></a>
+                    <div class="megasubmenu dropdown-menu">
+                      <ol class="submenu-link-list">
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN ETHNIC</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sarees</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas & Kurtis</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurta Sets & Salwar Suits</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Ethnic Dresses</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dress Materials</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Gowns</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Lehenga Cholis</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Leggings & Patialas</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Palazzos & Shararas</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Blouse</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dupatta</a></li>
+                      </ol>
+                    </div>
+                  </li>
+                 
+                  <li class="has-megasubmenu">
+                    <a class="dropdown-item" href="flipkart.com"> Women Western <span class="	greater_than_sign"> &#62; </span></a>
+                    <div class="megasubmenu dropdown-menu">
+                      <ol class="submenu-link-list">
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN WESTERN</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Tops</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dresses</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women T-shirts & Polo T-shirts</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Jeans</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Nighties & Night Dresses</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Nightsuit</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Track Pants</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Trouser</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Jumpsuit</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Shapewear</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sports Bra</a></li>
+                          </ol>
+                    </div>
+                  </li>   
+                   <li class="has-megasubmenu">
+                    <a class="dropdown-item" href="flipkart.com"> Men Footwear <span class="	greater_than_sign"> &#62; </span></a>
+                    <div class="megasubmenu dropdown-menu">
+                      <ol class="submenu-link-list">
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN FOOTWEAR</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sports Shoes</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Casual Shoes</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sandals & Floaters</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Slippers & Flip Flops</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Formal Shoes</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Shoes</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Active Footwear</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Combo Footwear</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Shoe Care</a></li>
+                      </ol>
+                    </div>
+                  </li>  
+                    <li class="has-megasubmenu">
+                    <a class="dropdown-item" href="flipkart.com">Women Footwear  <span class="	greater_than_sign"> &#62; </span></a>
+                    <div class="megasubmenu dropdown-menu">
+                      <ol class="submenu-link-list">
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN FOOTWEAR</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Flats</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Heels</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Wedges</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Slipper Flip Flops</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Casual Shoes</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sports Shoes</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Ballerinas</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Ethnic Shoes</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sneakers</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Walking Shoes</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Boots</a></li>
+                      </ol>
+                    </div>
+                  </li>
+    
+                  <li class="has-megasubmenu">
+                    <a class="dropdown-item" href="flipkart.com"> Watches and Accessories <span class="	greater_than_sign"> &#62; </span></a>
+                    <div class="megasubmenu dropdown-menu">
+                      <ol class="submenu-link-list">
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN BAGS, SUITCASES & LUGGAGE</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Backpacks</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Suitcases & Trolleys</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Dufflebags</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Rucksacks</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Handbags</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Slingbags</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Clutches & Wallets</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Messenger Bags</a></li>
+                            <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Travel Accessories</a></li>
+                          </ol>
+                          </div>
+                  </li>
+                  <li class="has-megasubmenu">
+                    <a class="dropdown-item" href="flipkart.com"> Bags, Suitcases & Luggage <span class="	greater_than_sign"> &#62; </span></a>
+                    <div class="megasubmenu dropdown-menu">
+                      <ol class="submenu-link-list">
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN KIDS</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Girls Dresses</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Tshirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Combosets</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Ethnic Wear</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Jeans</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Shorts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Trackpants</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Innerwear</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Infant Wear</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Slipper Flip Flops</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Sports Shoes</a></li>
+                      </ol>
+                      </div>
+                  </li>
+         
+                  <li class="has-megasubmenu">
+                    <a class="dropdown-item" href="flipkart.com">Essentials <span class="greater_than_sign"> &#62; </span></a>
+                    <div class="megasubmenu dropdown-menu">
+                      <ol class="submenu-link-list">
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN ESSENTIALS</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Briefs & Trunks</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Vests</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Boxers</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Lingerie Sets</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Bra</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Panty</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sarees</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurta Sets & Salwar Suits</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys Innerwear</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys Innerwear</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Girls Innerwear</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Slipper Flip Flops</a></li>
+                        </ol>
+                      </div>
+                  </li>
+                  <li class="has-megasubmenu">
+                    <a class="dropdown-item" href="flipkart.com">  Winter <span class="greater_than_sign"> &#62; </span></a>
+                    <div class="megasubmenu dropdown-menu">
+                      <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WINTER</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Jackets</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sweatshirts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sweaters</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Thermals</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Jackets</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Sweatshirts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Sweaters & Cardigans</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Shrugs</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Sweatshirts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Jackets</a></li>
+                    </ol>
+                    </div>
+                  </li>
+         
+  
+              </ul>
+        </li>
+	
+      
+            </ul>   
+          </div>
+
+          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+            <ul>
+                      
+            <li class="dropdown">
+              <a class=" dropdown-toggle" href="#" data-bs-toggle="dropdown"> 
+                <img class="sebmenuimg" src="image/icon/3.webp" alt="">
+                <div class="menu-tag" >
+                  Mobiles
+                </div> </a>
+           <ul class="dropdown-menu">
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="flipkart.com">  Men's Top Wear <span class="	greater_than_sign"> &#62; </span></a>
+                    <a class="dropdown-item" href="flipkart.com">  Men's Top Wear   <span style="align-items: flex-end;" class="greater_than_sign"> &#62; </span> </a>
+                    
                   <div class="megasubmenu dropdown-menu">
                     <ol class="submenu-link-list">
                         <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item title-link" href="#">MORE IN MEN'S TOP WEAR</a></li>
@@ -591,7 +919,428 @@
                 </li>
               
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="flipkart.com"> Men's Bottom Wear  <span class="	greater_than_sign"> &#62; </span></a>
+                  <a class="dropdown-item" href="flipkart.com"> Men's Bottom Wear  <span class="greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN'S BOTTOM WEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Jeans</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Trousers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Trackpants</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Shorts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Cargos</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Threefourths</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Pyjamas & Loungepants</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Dhoti</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Pyjama</a></li>
+                    </ol>
+                  </div>
+                </li> 
+              
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">Women Ethnic <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN ETHNIC</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sarees</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas & Kurtis</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurta Sets & Salwar Suits</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Ethnic Dresses</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dress Materials</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Gowns</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Lehenga Cholis</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Leggings & Patialas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Palazzos & Shararas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Blouse</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dupatta</a></li>
+                    </ol>
+                  </div>
+                </li>
+               
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Women Western <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN WESTERN</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Tops</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dresses</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women T-shirts & Polo T-shirts</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Jeans</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Nighties & Night Dresses</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Nightsuit</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Track Pants</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Trouser</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Jumpsuit</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Shapewear</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sports Bra</a></li>
+                        </ol>
+                  </div>
+                </li>   
+                 <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Men Footwear <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN FOOTWEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sports Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Casual Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sandals & Floaters</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Slippers & Flip Flops</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Formal Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Active Footwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Combo Footwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Shoe Care</a></li>
+                    </ol>
+                  </div>
+                </li>  
+                  <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">Women Footwear  <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN FOOTWEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Flats</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Heels</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Wedges</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Slipper Flip Flops</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Casual Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sports Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Ballerinas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Ethnic Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sneakers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Walking Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Boots</a></li>
+                    </ol>
+                  </div>
+                </li>
+  
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Watches and Accessories <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN BAGS, SUITCASES & LUGGAGE</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Backpacks</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Suitcases & Trolleys</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Dufflebags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Rucksacks</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Handbags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Slingbags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Clutches & Wallets</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Messenger Bags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Travel Accessories</a></li>
+                        </ol>
+                        </div>
+                </li>
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Bags, Suitcases & Luggage <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN KIDS</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Girls Dresses</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Tshirts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Combosets</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Ethnic Wear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Jeans</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Shorts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Trackpants</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Infant Wear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Slipper Flip Flops</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Sports Shoes</a></li>
+                    </ol>
+                    </div>
+                </li>
+       
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">Essentials <span class="greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN ESSENTIALS</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Briefs & Trunks</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Vests</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Boxers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Lingerie Sets</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Bra</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Panty</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sarees</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurta Sets & Salwar Suits</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Girls Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Slipper Flip Flops</a></li>
+                      </ol>
+                    </div>
+                </li>
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">  Winter <span class="greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WINTER</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Jackets</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sweatshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sweaters</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Thermals</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Jackets</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Sweatshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Sweaters & Cardigans</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Shrugs</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Sweatshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Jackets</a></li>
+                  </ol>
+                  </div>
+                </li>
+       
+
+            </ul>  <ul class="dropdown-menu">
+              <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">  Men's Top Wear   <span style="align-items: flex-end;" class="greater_than_sign"> &#62; </span> </a>
+                  
+                <div class="megasubmenu dropdown-menu">
+                  <ol class="submenu-link-list">
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item title-link" href="#">MORE IN MEN'S TOP WEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's T-Shirts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Casual Shirts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Formal Shirts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Kurtas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Sets</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Blazers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item- link dropdown-item" href="#">Men's Raincoat</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Windcheaters</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Suit</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Fabrics</a></li>
+                    </ol>
+                </div>
+              </li>
+            
+              <li class="has-megasubmenu">
+                <a class="dropdown-item" href="flipkart.com"> Men's Bottom Wear  <span class="greater_than_sign"> &#62; </span></a>
+                <div class="megasubmenu dropdown-menu">
+                  <ol class="submenu-link-list">
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN'S BOTTOM WEAR</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Jeans</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Trousers</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Trackpants</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Shorts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Cargos</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Threefourths</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Pyjamas & Loungepants</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Dhoti</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Pyjama</a></li>
+                  </ol>
+                </div>
+              </li> 
+            
+              <li class="has-megasubmenu">
+                <a class="dropdown-item" href="flipkart.com">Women Ethnic <span class="	greater_than_sign"> &#62; </span></a>
+                <div class="megasubmenu dropdown-menu">
+                  <ol class="submenu-link-list">
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN ETHNIC</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sarees</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas & Kurtis</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurta Sets & Salwar Suits</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Ethnic Dresses</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dress Materials</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Gowns</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Lehenga Cholis</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Leggings & Patialas</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Palazzos & Shararas</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Blouse</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dupatta</a></li>
+                  </ol>
+                </div>
+              </li>
+             
+              <li class="has-megasubmenu">
+                <a class="dropdown-item" href="flipkart.com"> Women Western <span class="	greater_than_sign"> &#62; </span></a>
+                <div class="megasubmenu dropdown-menu">
+                  <ol class="submenu-link-list">
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN WESTERN</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Tops</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dresses</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women T-shirts & Polo T-shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Jeans</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Nighties & Night Dresses</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Nightsuit</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Track Pants</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Trouser</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Jumpsuit</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Shapewear</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sports Bra</a></li>
+                      </ol>
+                </div>
+              </li>   
+               <li class="has-megasubmenu">
+                <a class="dropdown-item" href="flipkart.com"> Men Footwear <span class="	greater_than_sign"> &#62; </span></a>
+                <div class="megasubmenu dropdown-menu">
+                  <ol class="submenu-link-list">
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN FOOTWEAR</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sports Shoes</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Casual Shoes</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sandals & Floaters</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Slippers & Flip Flops</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Formal Shoes</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Shoes</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Active Footwear</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Combo Footwear</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Shoe Care</a></li>
+                  </ol>
+                </div>
+              </li>  
+                <li class="has-megasubmenu">
+                <a class="dropdown-item" href="flipkart.com">Women Footwear  <span class="	greater_than_sign"> &#62; </span></a>
+                <div class="megasubmenu dropdown-menu">
+                  <ol class="submenu-link-list">
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN FOOTWEAR</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Flats</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Heels</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Wedges</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Slipper Flip Flops</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Casual Shoes</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sports Shoes</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Ballerinas</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Ethnic Shoes</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sneakers</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Walking Shoes</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Boots</a></li>
+                  </ol>
+                </div>
+              </li>
+
+              <li class="has-megasubmenu">
+                <a class="dropdown-item" href="flipkart.com"> Watches and Accessories <span class="	greater_than_sign"> &#62; </span></a>
+                <div class="megasubmenu dropdown-menu">
+                  <ol class="submenu-link-list">
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN BAGS, SUITCASES & LUGGAGE</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Backpacks</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Suitcases & Trolleys</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Dufflebags</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Rucksacks</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Handbags</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Slingbags</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Clutches & Wallets</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Messenger Bags</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Travel Accessories</a></li>
+                      </ol>
+                      </div>
+              </li>
+              <li class="has-megasubmenu">
+                <a class="dropdown-item" href="flipkart.com"> Bags, Suitcases & Luggage <span class="	greater_than_sign"> &#62; </span></a>
+                <div class="megasubmenu dropdown-menu">
+                  <ol class="submenu-link-list">
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN KIDS</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Girls Dresses</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Tshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Combosets</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Ethnic Wear</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Jeans</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Shorts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Trackpants</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Innerwear</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Infant Wear</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Slipper Flip Flops</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Sports Shoes</a></li>
+                  </ol>
+                  </div>
+              </li>
+     
+              <li class="has-megasubmenu">
+                <a class="dropdown-item" href="flipkart.com">Essentials <span class="greater_than_sign"> &#62; </span></a>
+                <div class="megasubmenu dropdown-menu">
+                  <ol class="submenu-link-list">
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN ESSENTIALS</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Briefs & Trunks</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Vests</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Boxers</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Lingerie Sets</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Bra</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Panty</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sarees</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurta Sets & Salwar Suits</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys Innerwear</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys Innerwear</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Girls Innerwear</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Slipper Flip Flops</a></li>
+                    </ol>
+                  </div>
+              </li>
+              <li class="has-megasubmenu">
+                <a class="dropdown-item" href="flipkart.com">  Winter <span class="greater_than_sign"> &#62; </span></a>
+                <div class="megasubmenu dropdown-menu">
+                  <ol class="submenu-link-list">
+                <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WINTER</a></li>
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Jackets</a></li>
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sweatshirts</a></li>
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sweaters</a></li>
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Thermals</a></li>
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Jackets</a></li>
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Sweatshirts</a></li>
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Sweaters & Cardigans</a></li>
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Shrugs</a></li>
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Sweatshirts</a></li>
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas</a></li>
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Jackets</a></li>
+                </ol>
+                </div>
+              </li>
+     
+
+          </ul>
+        </li>
+	
+      
+            </ul>   
+          </div>
+
+          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
+            <ul>
+                      
+            <li class="dropdown">
+              <a class=" dropdown-toggle" href="#" data-bs-toggle="dropdown"> 
+                <img class="sebmenuimg" src="image/icon/4.webp" alt="">
+                <div class="menu-tag" >
+                  Fashion
+                </div>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="has-megasubmenu">
+                    <a class="dropdown-item" href="flipkart.com">  Men's Top Wear   <span style="align-items: flex-end;" class="greater_than_sign"> &#62; </span> </a>
+                    
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item title-link" href="#">MORE IN MEN'S TOP WEAR</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's T-Shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Casual Shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Formal Shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Kurtas</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Sets</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Blazers</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item- link dropdown-item" href="#">Men's Raincoat</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Windcheaters</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Suit</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Fabrics</a></li>
+                      </ol>
+                  </div>
+                </li>
+              
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Men's Bottom Wear  <span class="greater_than_sign"> &#62; </span></a>
                   <div class="megasubmenu dropdown-menu">
                     <ol class="submenu-link-list">
                     <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN'S BOTTOM WEAR</a></li>
@@ -772,119 +1521,6 @@
 
             </ul>
         </li>
-            </ul>   
-          </div>
-
-          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
-            <ul>
-                      
-            <li class="dropdown">
-              <a class=" dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                <img class="sebmenuimg" src="image/icon/2.webp" alt="">
-                <div class="menu-tag" >
-                  Grocery
-                </div> </a>
-                <ul class="dropdown-menu">
-                <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-                  <div class="megasubmenu dropdown-menu">
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                </div>
-                </li>
-
-              <li class="has-megasubmenu">
-              <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-              <div class="megasubmenu dropdown-menu">
-         
-                    <p><a href="#">Custom dfsdMenu</a></p>
-                    <p><a href="#">Custofsdfm Menu</a></p>
-                    <p><a href="#">Cussdftom Menu</a></p>
-                    <p><a href="#">Cussdfsdftom Menu</a></p>
-                 
-              </div>
-                </li>
-            </ul>
-        </li>
-	
-      
-            </ul>   
-          </div>
-
-          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
-            <ul>
-                      
-            <li class="dropdown">
-              <a class=" dropdown-toggle" href="#" data-bs-toggle="dropdown"> 
-                <img class="sebmenuimg" src="image/icon/3.webp" alt="">
-                <div class="menu-tag" >
-                  Mobiles
-                </div> </a>
-                <ul class="dropdown-menu">
-                <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-                  <div class="megasubmenu dropdown-menu">
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                </div>
-                </li>
-
-              <li class="has-megasubmenu">
-              <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-              <div class="megasubmenu dropdown-menu">
-         
-                    <p><a href="#">Custom dfsdMenu</a></p>
-                    <p><a href="#">Custofsdfm Menu</a></p>
-                    <p><a href="#">Cussdftom Menu</a></p>
-                    <p><a href="#">Cussdfsdftom Menu</a></p>
-                 
-              </div>
-                </li>
-            </ul>
-        </li>
-	
-      
-            </ul>   
-          </div>
-
-          <div class="col col-sm-4 top-submenu pb-2" style="text-align: center; width: auto; padding: auto;">
-            <ul>
-                      
-            <li class="dropdown">
-              <a class=" dropdown-toggle" href="#" data-bs-toggle="dropdown"> 
-                <img class="sebmenuimg" src="image/icon/4.webp" alt="">
-                <div class="menu-tag" >
-                  Fashion
-                </div>
-              </a>
-                <ul class="dropdown-menu">
-                <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-                  <div class="megasubmenu dropdown-menu">
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                </div>
-                </li>
-
-              <li class="has-megasubmenu">
-              <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-              <div class="megasubmenu dropdown-menu">
-         
-                    <p><a href="#">Custom dfsdMenu</a></p>
-                    <p><a href="#">Custofsdfm Menu</a></p>
-                    <p><a href="#">Cussdftom Menu</a></p>
-                    <p><a href="#">Cussdfsdftom Menu</a></p>
-                 
-              </div>
-                </li>
-            </ul>
-        </li>
 	
       
             </ul>   
@@ -899,28 +1535,208 @@
                   Electronics
                 </div>
               </a>
-                <ul class="dropdown-menu">
+              <ul class="dropdown-menu">
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
+                    <a class="dropdown-item" href="flipkart.com">  Men's Top Wear   <span style="align-items: flex-end;" class="greater_than_sign"> &#62; </span> </a>
+                    
                   <div class="megasubmenu dropdown-menu">
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                </div>
+                    <ol class="submenu-link-list">
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item title-link" href="#">MORE IN MEN'S TOP WEAR</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's T-Shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Casual Shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Formal Shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Kurtas</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Sets</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Blazers</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item- link dropdown-item" href="#">Men's Raincoat</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Windcheaters</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Suit</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Fabrics</a></li>
+                      </ol>
+                  </div>
                 </li>
+              
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Men's Bottom Wear  <span class="greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN'S BOTTOM WEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Jeans</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Trousers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Trackpants</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Shorts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Cargos</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Threefourths</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Pyjamas & Loungepants</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Dhoti</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Pyjama</a></li>
+                    </ol>
+                  </div>
+                </li> 
+              
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">Women Ethnic <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN ETHNIC</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sarees</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas & Kurtis</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurta Sets & Salwar Suits</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Ethnic Dresses</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dress Materials</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Gowns</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Lehenga Cholis</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Leggings & Patialas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Palazzos & Shararas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Blouse</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dupatta</a></li>
+                    </ol>
+                  </div>
+                </li>
+               
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Women Western <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN WESTERN</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Tops</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dresses</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women T-shirts & Polo T-shirts</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Jeans</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Nighties & Night Dresses</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Nightsuit</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Track Pants</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Trouser</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Jumpsuit</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Shapewear</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sports Bra</a></li>
+                        </ol>
+                  </div>
+                </li>   
+                 <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Men Footwear <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN FOOTWEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sports Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Casual Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sandals & Floaters</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Slippers & Flip Flops</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Formal Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Active Footwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Combo Footwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Shoe Care</a></li>
+                    </ol>
+                  </div>
+                </li>  
+                  <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">Women Footwear  <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN FOOTWEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Flats</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Heels</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Wedges</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Slipper Flip Flops</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Casual Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sports Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Ballerinas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Ethnic Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sneakers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Walking Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Boots</a></li>
+                    </ol>
+                  </div>
+                </li>
+  
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Watches and Accessories <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN BAGS, SUITCASES & LUGGAGE</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Backpacks</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Suitcases & Trolleys</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Dufflebags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Rucksacks</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Handbags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Slingbags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Clutches & Wallets</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Messenger Bags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Travel Accessories</a></li>
+                        </ol>
+                        </div>
+                </li>
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Bags, Suitcases & Luggage <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN KIDS</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Girls Dresses</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Tshirts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Combosets</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Ethnic Wear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Jeans</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Shorts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Trackpants</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Infant Wear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Slipper Flip Flops</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Sports Shoes</a></li>
+                    </ol>
+                    </div>
+                </li>
+       
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">Essentials <span class="greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN ESSENTIALS</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Briefs & Trunks</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Vests</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Boxers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Lingerie Sets</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Bra</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Panty</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sarees</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurta Sets & Salwar Suits</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Girls Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Slipper Flip Flops</a></li>
+                      </ol>
+                    </div>
+                </li>
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">  Winter <span class="greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WINTER</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Jackets</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sweatshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sweaters</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Thermals</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Jackets</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Sweatshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Sweaters & Cardigans</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Shrugs</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Sweatshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Jackets</a></li>
+                  </ol>
+                  </div>
+                </li>
+       
 
-              <li class="has-megasubmenu">
-              <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-              <div class="megasubmenu dropdown-menu">
-         
-                    <p><a href="#">Custom dfsdMenu</a></p>
-                    <p><a href="#">Custofsdfm Menu</a></p>
-                    <p><a href="#">Cussdftom Menu</a></p>
-                    <p><a href="#">Cussdfsdftom Menu</a></p>
-                 
-              </div>
-                </li>
             </ul>
         </li>
 	
@@ -937,27 +1753,205 @@
                   Home
                 </div>
               </a>
-                <ul class="dropdown-menu">
+              <ul class="dropdown-menu">
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
+                    <a class="dropdown-item" href="flipkart.com">  Men's Top Wear   <span style="align-items: flex-end;" class="greater_than_sign"> &#62; </span> </a>
+                    
                   <div class="megasubmenu dropdown-menu">
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                </div>
+                    <ol class="submenu-link-list">
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item title-link" href="#">MORE IN MEN'S TOP WEAR</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's T-Shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Casual Shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Formal Shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Kurtas</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Sets</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Blazers</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item- link dropdown-item" href="#">Men's Raincoat</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Windcheaters</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Suit</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Fabrics</a></li>
+                      </ol>
+                  </div>
                 </li>
-
-              <li class="has-megasubmenu">
-              <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-              <div class="megasubmenu dropdown-menu">
-         
-                    <p><a href="#">Custom dfsdMenu</a></p>
-                    <p><a href="#">Custofsdfm Menu</a></p>
-                    <p><a href="#">Cussdftom Menu</a></p>
-                    <p><a href="#">Cussdfsdftom Menu</a></p>
-                 
-              </div>
+              
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Men's Bottom Wear  <span class="greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN'S BOTTOM WEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Jeans</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Trousers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Trackpants</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Shorts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Cargos</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Threefourths</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Pyjamas & Loungepants</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Dhoti</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Pyjama</a></li>
+                    </ol>
+                  </div>
+                </li> 
+              
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">Women Ethnic <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN ETHNIC</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sarees</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas & Kurtis</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurta Sets & Salwar Suits</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Ethnic Dresses</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dress Materials</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Gowns</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Lehenga Cholis</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Leggings & Patialas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Palazzos & Shararas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Blouse</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dupatta</a></li>
+                    </ol>
+                  </div>
+                </li>
+               
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Women Western <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN WESTERN</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Tops</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dresses</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women T-shirts & Polo T-shirts</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Jeans</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Nighties & Night Dresses</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Nightsuit</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Track Pants</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Trouser</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Jumpsuit</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Shapewear</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sports Bra</a></li>
+                        </ol>
+                  </div>
+                </li>   
+                 <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Men Footwear <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN FOOTWEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sports Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Casual Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sandals & Floaters</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Slippers & Flip Flops</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Formal Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Active Footwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Combo Footwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Shoe Care</a></li>
+                    </ol>
+                  </div>
+                </li>  
+                  <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">Women Footwear  <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN FOOTWEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Flats</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Heels</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Wedges</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Slipper Flip Flops</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Casual Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sports Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Ballerinas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Ethnic Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sneakers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Walking Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Boots</a></li>
+                    </ol>
+                  </div>
+                </li>
+  
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Watches and Accessories <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN BAGS, SUITCASES & LUGGAGE</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Backpacks</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Suitcases & Trolleys</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Dufflebags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Rucksacks</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Handbags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Slingbags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Clutches & Wallets</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Messenger Bags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Travel Accessories</a></li>
+                        </ol>
+                        </div>
+                </li>
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Bags, Suitcases & Luggage <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN KIDS</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Girls Dresses</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Tshirts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Combosets</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Ethnic Wear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Jeans</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Shorts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Trackpants</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Infant Wear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Slipper Flip Flops</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Sports Shoes</a></li>
+                    </ol>
+                    </div>
+                </li>
+       
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">Essentials <span class="greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN ESSENTIALS</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Briefs & Trunks</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Vests</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Boxers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Lingerie Sets</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Bra</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Panty</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sarees</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurta Sets & Salwar Suits</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Girls Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Slipper Flip Flops</a></li>
+                      </ol>
+                    </div>
+                </li>
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">  Winter <span class="greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WINTER</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Jackets</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sweatshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sweaters</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Thermals</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Jackets</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Sweatshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Sweaters & Cardigans</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Shrugs</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Sweatshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Jackets</a></li>
+                  </ol>
+                  </div>
                 </li>
             </ul>
         </li>
@@ -974,28 +1968,208 @@
                 <div class="menu-tag" >
                   Appliances
                 </div> </a>
-                <ul class="dropdown-menu">
+             <ul class="dropdown-menu">
                 <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
+                    <a class="dropdown-item" href="flipkart.com">  Men's Top Wear   <span style="align-items: flex-end;" class="greater_than_sign"> &#62; </span> </a>
+                    
                   <div class="megasubmenu dropdown-menu">
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                </div>
+                    <ol class="submenu-link-list">
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item title-link" href="#">MORE IN MEN'S TOP WEAR</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's T-Shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Casual Shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Formal Shirts</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Kurtas</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Sets</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Blazers</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item- link dropdown-item" href="#">Men's Raincoat</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Windcheaters</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Suit</a></li>
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Fabrics</a></li>
+                      </ol>
+                  </div>
                 </li>
+              
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Men's Bottom Wear  <span class="greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN'S BOTTOM WEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Jeans</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Trousers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Trackpants</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Shorts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Cargos</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Threefourths</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Pyjamas & Loungepants</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Dhoti</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Pyjama</a></li>
+                    </ol>
+                  </div>
+                </li> 
+              
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">Women Ethnic <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN ETHNIC</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sarees</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas & Kurtis</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurta Sets & Salwar Suits</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Ethnic Dresses</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dress Materials</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Gowns</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Lehenga Cholis</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Leggings & Patialas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Palazzos & Shararas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Blouse</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dupatta</a></li>
+                    </ol>
+                  </div>
+                </li>
+               
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Women Western <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN WESTERN</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Tops</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Dresses</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women T-shirts & Polo T-shirts</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Jeans</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Nighties & Night Dresses</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Nightsuit</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Track Pants</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Trouser</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Jumpsuit</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Shapewear</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sports Bra</a></li>
+                        </ol>
+                  </div>
+                </li>   
+                 <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Men Footwear <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN MEN FOOTWEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sports Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Casual Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sandals & Floaters</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Slippers & Flip Flops</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Formal Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Ethnic Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Active Footwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Combo Footwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Shoe Care</a></li>
+                    </ol>
+                  </div>
+                </li>  
+                  <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">Women Footwear  <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WOMEN FOOTWEAR</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Flats</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Heels</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Wedges</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Slipper Flip Flops</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Casual Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sports Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Ballerinas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Ethnic Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sneakers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Walking Shoes</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Boots</a></li>
+                    </ol>
+                  </div>
+                </li>
+  
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Watches and Accessories <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                        <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN BAGS, SUITCASES & LUGGAGE</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Backpacks</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Suitcases & Trolleys</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Dufflebags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Rucksacks</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Handbags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Slingbags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Clutches & Wallets</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Messenger Bags</a></li>
+                          <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Travel Accessories</a></li>
+                        </ol>
+                        </div>
+                </li>
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com"> Bags, Suitcases & Luggage <span class="	greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN KIDS</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Girls Dresses</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Tshirts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Combosets</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Ethnic Wear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Jeans</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Shorts</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Trackpants</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys & Girls Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Infant Wear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Slipper Flip Flops</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Sports Shoes</a></li>
+                    </ol>
+                    </div>
+                </li>
+       
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">Essentials <span class="greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN ESSENTIALS</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Briefs & Trunks</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Vests</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Boxers</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Lingerie Sets</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Bra</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Panty</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Sarees</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurta Sets & Salwar Suits</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Boys Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Girls Innerwear</a></li>
+                      <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Slipper Flip Flops</a></li>
+                      </ol>
+                    </div>
+                </li>
+                <li class="has-megasubmenu">
+                  <a class="dropdown-item" href="flipkart.com">  Winter <span class="greater_than_sign"> &#62; </span></a>
+                  <div class="megasubmenu dropdown-menu">
+                    <ol class="submenu-link-list">
+                  <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">MORE IN WINTER</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">All</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Jackets</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sweatshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Sweaters</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Men's Thermals</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Jackets</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Sweatshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Sweaters & Cardigans</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women's Shrugs</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Sweatshirts</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Women Kurtas</a></li>
+                    <li class="dropdown-item-link"><a class="has-megasubmenu dropdown-item-link dropdown-item" href="#">Kids Jackets</a></li>
+                  </ol>
+                  </div>
+                </li>
+       
 
-              <li class="has-megasubmenu">
-              <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-              <div class="megasubmenu dropdown-menu">
-         
-                    <p><a href="#">Custom dfsdMenu</a></p>
-                    <p><a href="#">Custofsdfm Menu</a></p>
-                    <p><a href="#">Cussdftom Menu</a></p>
-                    <p><a href="#">Cussdfsdftom Menu</a></p>
-                 
-              </div>
-                </li>
             </ul>
         </li>
 	
@@ -1011,29 +2185,7 @@
                 <div class="menu-tag" >
                   Travel
                 </div> </a>
-                <ul class="dropdown-menu">
-                <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-                  <div class="megasubmenu dropdown-menu">
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                </div>
-                </li>
-
-              <li class="has-megasubmenu">
-              <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-              <div class="megasubmenu dropdown-menu">
-         
-                    <p><a href="#">Custom dfsdMenu</a></p>
-                    <p><a href="#">Custofsdfm Menu</a></p>
-                    <p><a href="#">Cussdftom Menu</a></p>
-                    <p><a href="#">Cussdfsdftom Menu</a></p>
-                 
-              </div>
-                </li>
-            </ul>
+              
         </li>
 	
       
@@ -1047,29 +2199,7 @@
                 <div class="menu-tag" >
                   Beauty, Toys & More
                 </div> </a>
-                <ul class="dropdown-menu">
-                <li class="has-megasubmenu">
-                  <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-                  <div class="megasubmenu dropdown-menu">
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                    <p><a href="#">Custom Menu</a></p>
-                </div>
-                </li>
-
-              <li class="has-megasubmenu">
-              <a class="dropdown-item" href="#"> Dropdown item  &raquo; </a>
-              <div class="megasubmenu dropdown-menu">
-         
-                    <p><a href="#">Custom dfsdMenu</a></p>
-                    <p><a href="#">Custofsdfm Menu</a></p>
-                    <p><a href="#">Cussdftom Menu</a></p>
-                    <p><a href="#">Cussdfsdftom Menu</a></p>
-                 
-              </div>
-                </li>
-            </ul>
+             
         </li>
 	
       
@@ -1105,6 +2235,7 @@
       </section>
   </div>
 </div>
+
 <div class="container-fluid slider_moblie" class="top-tag-bag"  style="background-color: white !important;">
   <div id="owl-carousel_offer" style="margin-top: -45px;" class="container pt-4 pb-2">
   <section id="offer">
@@ -1118,25 +2249,38 @@
   </div>
   </div>
   
-  <div class="mycontainer mt-2 mb-2 pc_slider">
+  <!-- <div class="mycontainer mt-2 mb-2 pc_slider">
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-control-prev" id="prev" style="margin-top: -87px;" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" > <div class='nav-btn prev-slide prev-btn'><svg width='14.6' height='27' viewBox='0 0 16 27' xmlns='http://www.w3.org/2000/svg' class='FXox6K'><path d='M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z' fill='#000' class='FXox6K'></path></svg></div> </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/icon/b1.jpg" class="d-block w-100" alt="..."></a>
+        <a href="#" class="p-link"> <img src="image/icon/b1.jpg" class="d-block w-100" alt="..."></a>
       </div>
       <div class="carousel-item">
-        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/icon/b2.jpg" class="d-block w-100" alt="..."></a>
+        <a href="#" class="p-link"> <img src="image/icon/b2.jpg" class="d-block w-100" alt="..."></a>
       </div>
       <div class="carousel-item">
-        <a href="https://www.flipkart.com/" class="p-link"> <img src="image/icon/b3.jpg" class="d-block w-100" alt="..."></a>
+        <a href="#" class="p-link"> <img src="image/icon/b3.jpg" class="d-block w-100" alt="..."></a>
       </div>
     </div>
    <div class="carousel-control-next" id="next"   style="margin-top: -87px;" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"><div class='next-btn nav-btn next-slide'><svg width='14.6' style='transform: rotate(180deg);' height='27' viewBox='0 0 16 27' xmlns='http://www.w3.org/2000/svg' class='_2-wzdc'><path d='M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z' fill='#000' class='FXox6K'></path></svg></div></div>
   </div>
   <div>
   </div>
-</div>
+</div> -->
+
+<div class="mycontainer mt-2 mb-2 pc_slider " >
+  <div id="owl-carousel_offer"  >
+  <section id="demodemo">
+  <div class="owl-carousel owl-theme">
+  <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/icon/b1.jpg"></a></div>
+    <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/icon/b2.jpg"></a></div>
+    <div class="item text-center"><a class="top-tag-bag" href="https://www.flipkart.com/"><img src="image/icon/b3.jpg"></a></div>
+  </div>
+   </section>
+  </div>
+  </div>
+
 
   <div class="mycontainer mt-2 mb-2" id="offer_banner_md" style="background-color: white; ">
     <a href="https://www.flipkart.com/" class="p-link"><img  class="pt-3 pb-3" style="width: 100%;" src="image/subbanner.webp" alt=""></a>
@@ -2640,11 +3784,7 @@
           <div class="footer-last-item"><img  class="payment" src="image/payment.svg" alt=""></div>
       </div>
 
-   
-    
 
-
-      
       <!-- <div class="container-fluid s" style="background-color: #172337;">
           <div class="my-footer-container footer ">
           <div class="row ">
